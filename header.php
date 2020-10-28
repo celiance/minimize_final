@@ -10,7 +10,6 @@
     <!-- HEADER HEADER -->
     <header>
       <a href="index.php">
-        <img src="assets/logo.png" alt="Logo" width="200px">
+        <img src="assets/logo.png" alt="Logo" width="200px" id="logo">
       </a>
-      <h1>HEADER</h1>
     </header>
