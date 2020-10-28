@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <title>Minimize</title>
   </head>
   <body>
     <!-- HEADER HEADER -->
     <header>
-      <img src="assets/logo.png" alt="Logo">
+      <img src="assets/logo.png" alt="Logo" width="200px">
       <h1>HEADER</h1>
     </header>
