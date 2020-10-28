@@ -12,7 +12,7 @@
     --hellblau: #45AAB4;
     --black: #000000;
     --dunkelblau: #164650;
-    --rot: #B55417;
+    --rot: #B52417;
     --desktopnavisability:block;
     --mobilenavisability:none;
 }
@@ -74,4 +74,8 @@ img{
   color: white;
   padding: 10px;
   margin: 20px;
+}
+
+.delete{
+  color: var(--rot);
 }
