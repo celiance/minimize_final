@@ -124,6 +124,10 @@ ul li a{
   display: flex;
 }
 
+.arrow_black{
+  width: 100px;
+}
+
 
 
 button{
