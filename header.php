@@ -2,7 +2,7 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>Minimize</title>
   </head>
   <body>
