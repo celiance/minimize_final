@@ -3,19 +3,19 @@
   <nav>
     <ul>
       <li>
-        <a href="/menu.php"><img src="" alt="">menü</a>
+        <a href="/menu.php"><img src="assets/burger.png" alt="burger" class="footerIcons"></a>
       </li>
       <li>
-        <a href="/MeinInventar.php"><img src="" alt="">home</a>
+        <a href="/home-uebersicht.php"><img src="assets/home.png" alt="burger" class="footerIcons"></a>
       </li>
       <li class="btnHinzuf">
-        <a href="/artikelErfassen.php"><img src="" alt="">+</a>
+        <a href="/artikelErfassen.php"><img src="assets/plus.png" alt="burger" class="footerIcons"></a>
       </li>
       <li>
-        <a href="/alert.php"><img src="" alt="">push</a>
+        <a href="/alert.php"><img src="assets/bell.png" alt="burger" class="footerIcons"></a>
       </li>
       <li>
-        <a href="/profil.php"><img src="" alt="">profil</a>
+        <a href="/profil.php"><img src="assets/profile.png" alt="burger" class="footerIcons"></a>
       </li>
     </ul>
   </nav>
