@@ -7,18 +7,18 @@
       <div class="box">
         <h3>Mein Inventar</h3>
         <div class="inventarBilder">
-          <img src="" alt="bild inventar 1">
-          <img src="" alt="bild inventar 1">
+          <img src="assets/testbild.jpg" alt="bild inventar 1">
+          <img src="assets/testbild.jpg" alt="bild inventar 1">
         </div>
       </div>
     </a>
 
     <a href="#">
       <div class="box">
-        <h3>Mein Inventar</h3>
+        <h3>Noch in Gebrauch?</h3>
         <div class="inventarBilder">
-          <img src="" alt="bild inventar 1">
-          <img src="" alt="bild inventar 1">
+          <img src="assets/testbild.jpg" alt="bild inventar 1">
+          <img src="assets/testbild.jpg" alt="bild inventar 1">
         </div>
       </div>
     </a>

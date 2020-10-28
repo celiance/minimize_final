@@ -7,7 +7,7 @@
     <!--Produktanzeige-->
     <a href="/produktseite.php">
       <div class="box">
-        <img src="" alt="bild inventar 1">
+        <img src="assets/testbild.jpg" alt="bild inventar 1">
         <div class="inventarBilder">
           <h3>Produkt Nr. 1</h3>
           <h5>Gekauft am</h5>
@@ -18,7 +18,7 @@
 
     <a href="/produktseite.php">
       <div class="box">
-        <img src="" alt="bild inventar 1">
+        <img src="assets/testbild.jpg" alt="bild inventar 1">
         <div class="inventarBilder">
           <h3>Produkt Nr. 1</h3>
           <h5>Gekauft am</h5>

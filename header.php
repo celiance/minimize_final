@@ -9,6 +9,8 @@
   <body>
     <!-- HEADER HEADER -->
     <header>
-      <img src="assets/logo.png" alt="Logo" width="200px">
+      <a href="index.php">
+        <img src="assets/logo.png" alt="Logo" width="200px">
+      </a>
       <h1>HEADER</h1>
     </header>

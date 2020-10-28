@@ -56,11 +56,16 @@ button{
   border-radius: 300px;
   color: white;
   text-align: center;
+  cursor: pointer;
 }
 
 li{
   text-decoration: none;
   list-style: none;
+}
+
+img{
+  width: 250px;
 }
 
 .box{
