@@ -8,5 +8,6 @@
   <body>
     <!-- HEADER HEADER -->
     <header>
+      <img src="" alt="Logo">
       <h1>HEADER</h1>
     </header>
