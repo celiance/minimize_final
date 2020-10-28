@@ -8,6 +8,6 @@
   <body>
     <!-- HEADER HEADER -->
     <header>
-      <img src="" alt="Logo">
+      <img src="assets/logo.png" alt="Logo">
       <h1>HEADER</h1>
     </header>

@@ -1,6 +1,8 @@
 <?php include 'header.php';?>
   <!-- MAIN MAIN -->
   <main>
-    <h2>Rundgang Seite 3</h2>
+    <h2>Verkaufe deine Produkte (3)</h2>
+    <p>Hier kommt ein fancy Text.</p>
+      <button type="button" name="button" onclick="window.location.href='/pages/register.php'">-></button>
   </main>
 <?php include 'footer.php';?>
