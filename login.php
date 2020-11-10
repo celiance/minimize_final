@@ -66,6 +66,9 @@
                 <p><?php echo $msg ?></p>
               </div>
               <?php } ?>
+              <a href="register.php">
+                <p>Du bist noch nicht registriert? Hier entlang!</p>
+              </a>
             </div>
           </main>
         </div>

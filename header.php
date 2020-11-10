@@ -1,3 +1,24 @@
+<?php
+  session_start();
+
+  require_once('system/config.php');
+  require_once('system/data.php');
+
+  if(isset($_SESSION['userid'])){
+    $user = get_user_by_id($_SESSION['userid']);
+    $user_id = $user['id'];
+    $logged_in = true;
+    $log_in_out_text = "Logout";
+
+  }else{
+    $logged_in = false;
+    $log_in_out_text = "Anmelden";
+
+  //Umleitung zu Login, falls noch nicht eingeloggt
+  //  header("Location: https://minimize.celiance.ch/login.php");
+  }
+
+?>
 
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
