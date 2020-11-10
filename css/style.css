@@ -155,3 +155,54 @@ img{
 .delete{
   color: var(--rot);
 }
+
+input{
+  margin: 50px 0px;
+  background: white;
+  border: 1px solid lightgrey;
+  box-shadow: 1px 1px 10px lightgrey;
+  width: 100%;
+  height: 120px;
+}
+
+label{
+  margin: 50px 0px;
+}
+
+.desktop-meldung{
+  display: none;
+  background-color: black;
+}
+
+@media (min-width: 992px) {
+
+  .desktop-meldung{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .desktop-meldung h2{
+      color: var(--dunkelblau);
+      margin-top: 0;
+  }
+
+  main{
+    display: none;
+  }
+  nav{
+    display: none;
+  }
+  header{
+    display: none;
+  }
+  footer{
+    display: none;
+  }
+
+ }
