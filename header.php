@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
   <head>
@@ -8,6 +9,7 @@
     <title>Minimize</title>
   </head>
   <body>
+
     <!-- HEADER HEADER -->
     <header>
       <a href="index.php">
