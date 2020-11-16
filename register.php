@@ -85,4 +85,4 @@
       <?php } ?>
     </div>
   </main>
-<?php include 'footer.php';?>
+<?php include 'footerloggout.php';?>
