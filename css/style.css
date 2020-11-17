@@ -1,6 +1,6 @@
 /*IMPORT----------------------------------------*/
 /* SCHRIFT FIRA: font-family: 'Fira Sans', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 /* SCHRIFT BEBAS: font-family: 'Bebas Neue', cursive;*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap');
 
@@ -15,7 +15,18 @@
     --rot: #B52417;
     --desktopnavisability:block;
     --mobilenavisability:none;
+
+
+    /*H2*/
+    --zeichenabstand: 0.05em;
+
+    /*p*/
+    --zeichenabstand2: 0.05em;
+    --grösse2: 110%;
+    --zeilenabstand: 30px;
 }
+
+
 
 /*ALLGEMEIN----------------------------------------*/
 body{
@@ -25,7 +36,7 @@ body{
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     font-family: 'Fira Sans', sans-serif;
-    color: var(--dunkelblau);
+    color: black;
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -35,43 +46,89 @@ body{
     align-items: center;
 }
 
-header, main, footer{
-  width: 100vw;
-  height: auto;
-  padding: 0;
-  margin: 0 auto;
-  background: white;
-  font-size: 2.5rem;
+h2{
+  letter-spacing: var(--zeichenabstand);
 }
+
+p{
+  letter-spacing: var(--zeichenabstand2);
+  font-size: var(--grösse2);
+  line-height: var(--zeilenabstand);
+
+}
+
+
+/*Onepage*/
+section.onepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+}
+section.onepage header{
+    height: auto;
+    position: absolute;
+    width: 100vw;
+
+    top: 0;
+    left: 0;
+}
+section.onepage main{
+    width: 80vw;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 120px;
+}
+section.onepage footer{
+    width: 100%;
+
+}
+
+.navigation{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+button{
+  border: none;
+  background: none;
+
+}
+
+
+
+
+.icon{
+  color: black;
+  padding: 60px;
+  font-size: 1.5rem;
+}
+
+
 
 
 #logo{
   margin: 3rem;
 }
 
-main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 0rem 5rem 0rem;
-}
 
 .knopf{
-  justify-content: flex-end;
-  flex-direction: column;
+  margin-top: 8vh;
+  text-align: center;
+
 }
 
 
-
-.main-content{
-  width: 90vw;
-  margin: 0 auto;
-  margin-bottom: 12vh;
-}
 
 nav{
   display: flex;
+
   width: 100vw;
   height: 11vh;
   position: fixed;
@@ -80,25 +137,25 @@ nav{
   font-size: 2.5rem;
   margin: 0;
   padding: 0;
-  box-shadow: 0px 0px 30px rgb(0, 0, 0, 0.2);
+
+}
+
+.navigation{
+  width: 80vw;
 }
 
 ul{
-  display: flex;
-  align-items: center;
-  width: 100vw;
-  padding: 0;
-  justify-content: center;
+
+  align-item: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
 }
 
-li{
-  text-decoration: none;
-  list-style: none;
-  flex-direction: row;
-  margin: 1.2rem;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
+.login{
+  border: none;
+  background-color: inherit;
+  color: black;
 }
 
 a{
@@ -125,10 +182,6 @@ ul li a{
   align-items: center;
 }
 
-.footerIcons{
-  width: 60%;
-  display: flex;
-}
 
 .arrow_black{
   width: 100px;
@@ -136,18 +189,6 @@ ul li a{
 
 
 
-button{
-  padding: 13px 15px;
-  background-color: var(--black);
-  border-radius: 300px;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-}
-
-img{
-  width: 260px;
-}
 
 .box{
   background: var(--black);
