@@ -52,7 +52,7 @@
 ?>
           <!-- LOGIN -->
           <main>
-            <div class="login">
+            <section class="login">
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <label for="email">E-Mail</label></br>
                 <input type="text" name="email" value="" id="email"></br>
@@ -69,7 +69,7 @@
               <a href="register.php">
                 <p>Du bist noch nicht registriert? Hier entlang!</p>
               </a>
-            </div>
+            </section>
           </main>
         </div>
     </div>

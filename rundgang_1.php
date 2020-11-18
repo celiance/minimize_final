@@ -21,9 +21,7 @@
             <p>Hier kommt ein fancy Text.</p>
             <button type="button" name="button" onclick="window.location.href='/rundgang_2.php'"><img src="assets/arrow_black.png" alt="pfeil" class="arrow_black"></button>
         </main>
-        <footer>
-            <?php include 'footerloggout.php';?>
-        </footer>
+    
     </section>
 </body>
 

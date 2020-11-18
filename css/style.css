@@ -101,7 +101,16 @@ button{
 
 }
 
+.jetztregistrieren{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 110%;
+  letter-spacing: 0.05em;
+  margin-top: 20px;
 
+}
 
 
 .icon{
