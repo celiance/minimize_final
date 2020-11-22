@@ -5,7 +5,7 @@
 
   require_once('system/config.php');
   require_once('system/data.php');
-  include 'header.php';
+
 
 
   $logged_in = false;
@@ -65,24 +65,30 @@
 
 
   <!-- MAIN MAIN -->
-  <main>
-    <div class="main-content">
-      <h2>Registriere dich jetzt</h2>
-      <p>Hier kommt ein fancy Text.</p>
-      <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-        <label for="name">Dein Name</label><br>
-        <input type="text" name="name" value="" class="name"></br>
-        <label for="email">E-Mail</label></br>
-        <input type="email" name="email" value="<?php if(isset($email)) echo $email; ?>" class="email"></br>
-        <label for="password">Passwort</label></br>
-        <input type="password" name="password" value="" class="password"></br>
-        <button type="submit" name="register_submit" value="registrieren">Registrieren</button>
-      </form>
-      <?php if(!empty($msg)){ ?>
-      <div class="nachricht" role="alert">
-        <p><?php echo $msg ?></p>
-      </div>
-      <?php } ?>
-    </div>
-  </main>
-<?php include 'footerloggout.php';?>
+  <body>
+    <section class="login">
+        <header>
+            <?php include 'header.php';?>
+        </header>
+        <main>
+             <h2>Bitte Registreire dich um minimize zu nutzen</h2>
+              <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+                <label for="name">Dein Name</label><br>
+                <input type="text" name="name" value="" class="name"></br>
+                <label for="email">E-Mail</label></br>
+                <input type="email" name="email" value="<?php if(isset($email)) echo $email; ?>" class="email"></br>
+                <label for="password">Passwort</label></br>
+                <input type="password" name="password" value="" class="password"></br>
+                <button type="submit" name="register_submit" value="registrieren">Registrieren</button>
+              </form>
+          <?php if(!empty($msg)){ ?>
+          <div class="nachricht" role="alert">
+            <p><?php echo $msg ?></p>
+          </div>
+          <?php } ?>
+        </main>
+        <footer>
+            <?php include 'footerloggout.php';?>
+        </footer>
+    </section>
+  </body>

@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  include 'header.php';
+
   require_once('system/config.php');
   require_once('system/data.php');
 
@@ -53,11 +53,16 @@
           <!-- LOGIN -->
           <main>
             <section class="login">
+      
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-                <label for="email">E-Mail</label></br>
-                <input type="text" name="email" value="" id="email"></br>
-                <label for="password">Passwort</label></br>
-                <input type="password" name="password" value="" id="password"></br>
+                <div>
+                  <label for="email">E-Mail</label></br>
+                  <input type="text" name="email" value="" id="email"></br>
+                </div>
+                <div>
+                  <label for="password">Passwort</label></br>
+                  <input type="password" name="password" value="" id="password"></br>
+                </div>
                 <button type="submit" name="login_submit" value="einloggen">Anmelden</button>
               </form>
               <!-- Nachricht -->

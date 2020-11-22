@@ -2,7 +2,8 @@
 /* SCHRIFT FIRA: font-family: 'Fira Sans', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 /* SCHRIFT BEBAS: font-family: 'Bebas Neue', cursive;*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
 
 
 /*VARIABELN----------------------------------------*/
@@ -58,7 +59,8 @@ p{
 }
 
 
-/*Onepage*/
+/*Index Onepage*/
+
 section.onepage{
     display: flex;
     flex-direction: column;
@@ -66,7 +68,50 @@ section.onepage{
     align-items: center;
     height: 100vh;
 }
+
 section.onepage header{
+    height: auto;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+section.onepage main{
+    width: 80vw;
+    min-height: 70vh;
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+section.onepage footer{
+    width: 100%;
+    position: fixed;
+
+
+}
+
+
+
+
+
+
+
+
+/*Home Onepage*/
+
+section.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 80vh;
+}
+
+section.home header{
     height: auto;
     position: absolute;
     width: 100vw;
@@ -74,25 +119,97 @@ section.onepage header{
     top: 0;
     left: 0;
 }
-section.onepage main{
+
+body.home {
+  background: whitesmoke;
+}
+
+section.home main{
     width: 80vw;
     min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 120px;
+
 }
-section.onepage footer{
+
+section.home footer{
     width: 100%;
+    position: fixed;
 
 }
 
-.navigation{
+section.home h2{
+  padding-left: 1rem;
+}
+
+section.home p{
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+section.home button{
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+
+
+
+
+
+/*Scrollpage Invenar*/
+body.inventar{
+  background: whitesmoke;
+}
+
+section.inventar{
+    display: block;
+
+}
+section.inventar header{
+    height: auto;
+}
+
+
+section.inventar main{
+    min-height: 100vh;
+    width: 90vw;
+    display: block;
+}
+
+section.inventar footer{
+    width: 100%;
+    position: fixed;
+}
+
+section.inventar h2{
+  padding-left: 1rem;
+}
+
+
+
+
+
+
+
+section.login header {
+  height: auto;
+  position: absolute;
+  width: 100vw;
+
+  top: 0;
+  left: 0;
+}
+
+form {
+  width: 80vw;
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 100px;
+
 }
+
 
 
 button{
@@ -115,7 +232,7 @@ button{
 
 .icon{
   color: black;
-  padding: 60px;
+  padding: 1.5rem;
   font-size: 1.5rem;
 }
 
@@ -123,7 +240,7 @@ button{
 
 
 #logo{
-  margin: 3rem;
+  padding-top: 3rem;
 }
 
 
@@ -132,7 +249,6 @@ button{
   text-align: center;
 
 }
-
 
 
 nav{
@@ -151,15 +267,10 @@ nav{
 
 .navigation{
   width: 80vw;
+  padding-top: 2rem;
 }
 
-ul{
 
-  align-item: center; /* Center-align text */
-  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
-  padding: 12px 0; /* Some top and bottom padding */
-  transition: all 0.3s ease; /* Add transition for hover effects */
-}
 
 .login{
   border: none;
@@ -184,12 +295,6 @@ a:hover, a:active{
     margin-top: -4vh;
 }
 
-ul li a{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
 
 
 .arrow_black{
@@ -197,15 +302,51 @@ ul li a{
 }
 
 
-
+/*Boxes*/
 
 .box{
-  background: var(--black);
-  border-radius: 10px;
-  color: white;
-  padding: 2rem;
-  margin: 2rem 0px;
+  background: white;
+  border-radius: 25px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--black);
+  margin-top: 2rem;
 
+}
+
+.produktbox{
+  background: white;
+  border-radius: 25px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-template-rows: 10% 50%;
+  height: auto;
+  color: var(--black);
+  margin-top: 1rem;
+  grid-gap: 2rem;
+  grid-template-columns: 40% auto;
+
+}
+
+
+.testbild{
+    grid-column-start: 1;
+    grid-row-end: 2;
+    border-radius: 25%;
+    padding: 1rem;
+}
+
+.produktname{
+  grid-column-start: 2;
+
+}
+
+.datum{
+  grid-column-start: 2;
+  grid-row-end: 2;
 }
 
 .delete{
@@ -219,6 +360,7 @@ input{
   box-shadow: 1px 1px 10px lightgrey;
   width: 100%;
   height: 120px;
+
 }
 
 label{
