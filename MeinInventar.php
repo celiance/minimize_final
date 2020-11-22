@@ -61,7 +61,7 @@
         </main>
 
         <footer>
-            <?php include "footerloggout.php";?>
+            <?php include "footer.php";?>
         </footer>
 
     </section>

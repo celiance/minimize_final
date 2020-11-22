@@ -96,11 +96,6 @@ section.onepage footer{
 
 
 
-
-
-
-
-
 /*Home Onepage*/
 
 section.home{
@@ -145,7 +140,7 @@ section.home h2{
 
 section.home p{
   padding-left: 1rem;
-  padding-top: 1rem;
+
 }
 section.home button{
   padding-bottom: 1rem;
@@ -157,7 +152,7 @@ section.home button{
 
 
 
-/*Scrollpage Invenar*/
+/*Scrollpage Inventar*/
 body.inventar{
   background: whitesmoke;
 }
@@ -178,7 +173,7 @@ section.inventar main{
 }
 
 section.inventar footer{
-    width: 100%;
+    width: 90vw;
     position: fixed;
 }
 
@@ -190,7 +185,36 @@ section.inventar h2{
 
 
 
+/*Scrollpage Alert*/
+body.alert{
+  background: whitesmoke;
+}
 
+section.alert{
+    display: block;
+
+}
+section.alert header{
+    height: auto;
+}
+
+
+section.alert main{
+    min-height: 100vh;
+    width: 90vw;
+    display: block;
+}
+
+
+
+section.alert h2{
+  padding-left: 1rem;
+}
+
+
+
+
+/*Login*/
 
 section.login header {
   height: auto;
@@ -266,8 +290,8 @@ nav{
 }
 
 .navigation{
-  width: 80vw;
-  padding-top: 2rem;
+  width: 90vw;
+
 }
 
 
@@ -330,6 +354,33 @@ a:hover, a:active{
   grid-template-columns: 40% auto;
 
 }
+
+.alertbox{
+  background: white;
+  border-radius: 25px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-template-rows: 10% 50%;
+  height: auto;
+  color: var(--black);
+  margin-top: 1rem;
+  grid-gap: 2rem;
+  grid-template-columns: 40% auto;
+}
+
+.menu{
+  border-radius: 25px;
+  height: auto;
+  max-width: 90vw;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 70% auto;
+  color: var(--black);
+  align-items: center;
+
+}
+
 
 
 .testbild{
@@ -397,9 +448,6 @@ label{
     display: none;
   }
   header{
-    display: none;
-  }
-  footer{
     display: none;
   }
 
