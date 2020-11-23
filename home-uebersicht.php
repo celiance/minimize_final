@@ -34,7 +34,7 @@
 
                 <a href="/MeinInventar.php">
                   <button>
-                    <i class="fas fa-arrow-circle-right fa-3x"></i>
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
               </div>
@@ -44,7 +44,7 @@
 
                 <a href="/MeinInventar.php">
                   <button>
-                    <i class="fas fa-arrow-circle-right fa-3x"></i>
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
               </div>

@@ -19,10 +19,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" media="screen" href="main.css">
       <script src="main.js"></script>
-      <script src="https://kit.fontawesome.com/898fafec69.js" crossorigin="anonymous"></script>
   </head>
   <body class="home">
-    <section class="home">
+    <section class="menu">
         <header>
             <?php include 'header.php';?>
         </header>

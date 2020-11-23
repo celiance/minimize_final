@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/898fafec69.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,7 +19,8 @@
         <main>
              <h2>Rundgang starten.</h2>
               <p> Erlebe die App und ihre Funktionen. We show you what we got!  imfall gell.</p>
-            <button type="button" name="button" onclick="window.location.href='/rundgang_1.php'"><img src="assets/arrow_black.png" alt="pfeil" class="arrow_black"></button>
+            <button type="button" name="button" onclick="window.location.href='/rundgang_1.php'">
+              <i class="fas fa-arrow-circle-right fa-3x"></i>
         </main>
         <footer>
             <?php include 'footerloggout.php';?>

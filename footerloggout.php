@@ -8,15 +8,6 @@
           <i class="fas fa-bars"></i>
       </div>
 
-      <a href="/home-uebersicht.php">
-        <div class="icon">
-          <i class="fas fa-bars"></i>
-      </div>
-
-      <a href="/login.php">
-        <div class="icon">
-          <button type="button">Login</button>
-      </div>
 
       <a href="/login.php">
         <div class="icon">

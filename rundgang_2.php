@@ -21,7 +21,7 @@
             <p>Hier kommt ein fancy Text.und ganz viel mehr tolle sachen</p>
             <button type="button" name="button" onclick="window.location.href='/rundgang_3.php'"><img src="assets/arrow_black.png" alt="pfeil" class="arrow_black"></button>
         </main>
-      
+
     </section>
 </body>
 

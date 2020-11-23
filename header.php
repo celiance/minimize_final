@@ -34,13 +34,13 @@
     <!-- HEADER HEADER -->
     <header>
       <a href="index.php">
-        <img src="assets/logo.png" alt="Logo" width="150px" id="logo">
+        <img src="../assets/minimizelogo.png" alt="Logo" width="110px" id="logo">
       </a>
     </header>
 
     <div class="desktop-meldung">
       <a href="index.php">
-        <img src="assets/logo.png" alt="Logo" width= 200px" id="logo">
+        <img src="assets/logominimize.png" alt="Logo" width= 200px" id="logo">
       </a>
       <h2>Bitte öffne Minimize mit deinem Handy.</h2>
     </div>

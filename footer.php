@@ -16,7 +16,7 @@
 
   <a href="/artikelErfassen.php">
     <div class="icon">
-      <i class="fas fa-plus-circle f fa-3x"></i>
+      <i class="fas fa-plus-circle"></i>
   </div>
 
   <a href="/alert.php">
