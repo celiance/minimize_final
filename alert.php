@@ -21,9 +21,21 @@
         <main>
             <h2>Brauchst du diese Artikel noch?</h2>
 
+              <div class="alertbox">
+                <a href="/produkseite.php">
+                <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
+                </a>
+                <p class="produktname"> jsdnfsdf</p>
+                <p class="datum"> 5.12.12</p>
+              </div>
 
-
-            </div>
+              <div class="alertbox">
+                <a href="/produkseite.php">
+                <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
+                </a>
+                <p class="produktname"> jsdnfsdf</p>
+                <p class="datum"> 5.12.12</p>
+              </div>
 
               <div class="alertbox">
                 <a href="/produkseite.php">

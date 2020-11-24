@@ -14,15 +14,14 @@
 <body>
     <section class="onepage">
         <header>
-            <?php include 'header.php';?>
+            <?php include 'headerarrow.php';?>
         </header>
         <main>
-             <h2>Erfasse deine Produkte (2)</h2>
-            <p>Hier kommt ein fancy Text.und ganz viel mehr tolle sachen</p>
-            <button type="button" name="button" onclick="window.location.href='/rundgang_3.php'"><img src="assets/arrow_black.png" alt="pfeil" class="arrow_black"></button>
+             <h2>Weniger Konsum (2).</h2>
+              <p> Es ist für dich und die Umwelt besser weniger zu konsumieren. Imfall</p>
+            <button type="button" name="button" onclick="window.location.href='/rundgang_3.php'">
+              <i class="fas fa-arrow-circle-right fa-3x"></i>
         </main>
-
     </section>
 </body>
-
 </html>
