@@ -45,6 +45,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: -webkit-fill-available;
+
 }
 
 h2{
@@ -65,107 +67,85 @@ section.onepage{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100vh;
-    min-height: -webkit-fill-available;
-}
-
-section.onepage header{
-    height: auto;
-    position: absolute;
     align-items: center;
-    width: 100vw;
+    height: 100%;
+    position: fixed;
+
+}
+section.onepage header{
+    position: absolute;
+    width: 90vw;
+    padding-left: -2rem;
     top: 0;
     left: 0;
-    padding-left: 2rem;
 }
-
 section.onepage main{
     width: 80vw;
-    min-height: 70vh;
-    margin-bottom: 120px;
-    align-items: left;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
+    padding-bottom: 20vh;
 }
-
-
 section.onepage footer{
-    width: 100%;
-    position: fixed;
+    width: 100vw;
 
 
 }
 
 section.onepage button{
-  border: black;
+  border: none;
   background-color: white;
 }
 
 
-.jetztregistrieren{
-
-
-}
-
 /*Home Onepage*/
 
+body.home {
+  background-color: whitesmoke;
+}
 section.home{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    min-height: 80vh;
-    min-height: -webkit-fill-available;
-}
+    height: 100vh;
 
+}
 section.home header{
     height: auto;
     position: absolute;
-    text-align: center;
-    width: 100vw;
+    width: 90vw;
+    padding-left: 2rem;
     top: 0;
-
+    left: 0;
 }
-
-body.home {
-  background: whitesmoke;
-}
-
 section.home main{
     width: 80vw;
-    min-height: 70vh;
-    padding-bottom: 4rem;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
+    padding-bottom: 100px;
 }
-
 section.home footer{
-    position: fixed;
-    text-align: justify;
-}
+    width: 100vw;
 
-section.home h2{
-  padding-left: 1rem;
-}
 
-section.home p{
-  padding-left: 1rem;
 
 }
+
 section.home button{
-  padding-bottom: 1rem;
-  padding-left: 1rem;
   border: none;
   background-color: whitesmoke;
+  border-radius: 25%;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
 }
 
-
-
-
+section.home p {
+  padding-left: 1rem;
+}
 
 
 /*Scrollpage Inventar*/
@@ -202,6 +182,10 @@ section.inventar h2{
 /*onepage Menu*/
 
 
+body.menu {
+  background-color: white;
+}
+
 section.menu{
     display: flex;
     flex-direction: column;
@@ -215,9 +199,10 @@ section.menu{
 section.menu header{
     height: auto;
     position: absolute;
-    text-align: center;
-    width: 100vw;
+    width: 90vw;
+    padding-left: 2rem;
     top: 0;
+    left: 0;
 
 }
 
@@ -249,7 +234,7 @@ section.menu h2{
 section.menu button{
   padding-left: 2rem;
   border: none;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 
@@ -287,6 +272,7 @@ section.alert main{
 
 section.alert h2{
   padding-left: 1rem;
+  padding-top: 2rem;
 }
 
 
@@ -363,16 +349,28 @@ nav{
   position: fixed;
   width: 20%;
   bottom: -2px;
-  background: white;
+  background: none;
   font-size: 2.5rem;
-  background-color: whitesmoke;
   width: 90vw;
-
+  align-items: center;
   justify-content: space-between;
+
 
 }
 
+li{
+  display: flex;
+  height: 11vh;
+  position: fixed;
+  width: 20%;
+  bottom: -2px;
+  background: none;
+  font-size: 2.5rem;
+  width: 90vw;
+  align-items: center;
+  justify-content: space-between;
 
+}
 
 
 a{
@@ -429,16 +427,21 @@ a:hover, a:active{
 .alertbox{
   background: white;
   border-radius: 25px;
-  height: auto;
   display: grid;
-  grid-template-columns: 40% auto;
-  grid-template-rows: 10% 50%;
-  height: auto;
   color: var(--black);
   margin-top: 1rem;
-  grid-gap: 2rem;
-  grid-template-columns: 40% auto;
+  grid-template-columns: 1fr 2fr;
+
 }
+
+.alerttext {
+  padding-left: 2rem;
+  letter-spacing: var(--zeichenabstand2);
+  line-height: var(--zeilenabstand);
+  font-size: var(--grösse2);
+}
+
+
 
 .menu{
   border-radius: 25px;
@@ -462,15 +465,6 @@ a:hover, a:active{
     padding: 1rem;
 }
 
-.produktname{
-  grid-column-start: 2;
-
-}
-
-.datum{
-  grid-column-start: 2;
-  grid-row-end: 2;
-}
 
 .delete{
   color: var(--rot);

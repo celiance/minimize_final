@@ -21,12 +21,13 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="de" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/898fafec69.js" crossorigin="anonymous"></script>
     <title>Minimize</title>
   </head>
   <body>
@@ -37,10 +38,3 @@
         <img src="../assets/minimizelogo.png" alt="Logo" width="120px" id="logo">
       </a>
     </header>
-
-    <div class="desktop-meldung">
-      <a href="index.php">
-        <img src="assets/logominimize.png" alt="Logo" width= 200px" id="logo">
-      </a>
-      <h2>Bitte öffne Minimize mit deinem Handy.</h2>
-    </div>

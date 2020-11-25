@@ -1,11 +1,7 @@
 
-
-
 <!-- FOOTER FOOTER -->
 <footer>
-  <script src="https://kit.fontawesome.com/898fafec69.js" crossorigin="anonymous"></script>
-
-<nav>
+<li>
   <a href="/menu.php">
     <div class="icon">
       <i class="fas fa-bars"></i>
@@ -23,7 +19,8 @@
         <div class="icon">
           <i class="far fa-user"></i>
       </div>
-</nav>
+</li>
 </footer>
+</section>
 </body>
 </html>

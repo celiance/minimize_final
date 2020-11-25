@@ -65,11 +65,9 @@
 
 
   <!-- MAIN MAIN -->
+<?php include 'header.php';?>
   <body>
     <section class="login">
-        <header>
-            <?php include 'header.php';?>
-        </header>
         <main>
              <h2>Bitte Registreire dich um minimize zu nutzen</h2>
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
@@ -87,8 +85,5 @@
           </div>
           <?php } ?>
         </main>
-        <footer>
-            <?php include 'footerloggout.php';?>
-        </footer>
-    </section>
-  </body>
+
+  <?php include 'footerloggout.php';?>

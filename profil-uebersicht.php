@@ -1,5 +1,3 @@
-
-
 <?php
   session_start();
 
@@ -28,34 +26,24 @@
 
         <main>
 
-              <div class="menu">
-                <p>Über minimize</p>
+            <h2>Hallo <?php echo $user['name']; ?></h2>
 
+              <div class="menu">
                 <a href="/MeinInventar.php">
                   <button>
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
-              </div>
-
-              <div class="menu">
                 <p>Hilfe</p>
-
-                <a href="/MeinInventar.php">
-                  <button>
-                    <i class="fas fa-arrow-circle-right fa-2x"></i>
-                  </button>
-                </a>
               </div>
 
               <div class="menu">
-                <p>Impressum</p>
-
                 <a href="/MeinInventar.php">
                   <button>
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
+                <p>Impressum</p>
               </div>
 
 
