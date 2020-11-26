@@ -67,16 +67,19 @@
   <!-- MAIN MAIN -->
 <?php include 'header.php';?>
   <body>
-    <section class="login">
+    <section class="register">
         <main>
-             <h2>Bitte Registreire dich um minimize zu nutzen</h2>
+             <p>Bitte Registreire dich um minimize zu nutzen</p>
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <label for="name">Dein Name</label><br>
                 <input type="text" name="name" value="" class="name"></br>
+
                 <label for="email">E-Mail</label></br>
                 <input type="email" name="email" value="<?php if(isset($email)) echo $email; ?>" class="email"></br>
+
                 <label for="password">Passwort</label></br>
                 <input type="password" name="password" value="" class="password"></br>
+
                 <button type="submit" name="register_submit" value="registrieren">Registrieren</button>
               </form>
           <?php if(!empty($msg)){ ?>

@@ -49,6 +49,15 @@ body{
 
 }
 
+header{
+  width: 80vw;
+
+
+}
+
+
+
+
 h2{
   letter-spacing: var(--zeichenabstand);
 }
@@ -60,6 +69,15 @@ p{
 
 }
 
+section.register{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+}
+
+
 
 /*Index Onepage*/
 
@@ -67,29 +85,16 @@ section.onepage{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
-    height: 100%;
+    height: 80vh;
     position: fixed;
 
 }
 
-section.onepage main{
-    width: 80vw;
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 20vh;
-}
-section.onepage footer{
-    width: 100vw;
-
-
-}
 
 section.onepage button{
   border: none;
   background-color: white;
+  padding-left: 20vh;
 }
 
 
@@ -103,38 +108,25 @@ section.home{
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    height: 100vh;
+
 
 }
-section.home header{
-    height: auto;
-    position: absolute;
-    width: 90vw;
-    padding-left: 2rem;
-    top: 0;
-    left: 0;
-}
+
 section.home main{
     width: 80vw;
-    min-height: 50vh;
+    min-height: 80vh;
+    padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 100px;
-}
-section.home footer{
-    width: 100vw;
-
-
 
 }
 
-section.home button{
-  border: none;
-  background-color: whitesmoke;
-  border-radius: 25%;
+section.home button {
   padding-left: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  border: none;
+  background-color: transparent;
 }
 
 section.home p {
@@ -143,6 +135,7 @@ section.home p {
 
 
 /*Scrollpage Inventar*/
+
 body.inventar{
   background: whitesmoke;
   min-height: -webkit-fill-available;
@@ -152,25 +145,20 @@ section.inventar{
     display: block;
 
 }
-section.inventar header{
-    height: auto;
-    text-align: center;
-}
 
 
 section.inventar main{
     min-height: 100vh;
     width: 90vw;
     display: block;
+    padding-left: 1rem;
 }
 
-section.inventar footer{
-    width: 90vw;
-    position: fixed;
-}
+
 
 section.inventar h2{
   padding-left: 1rem;
+  padding-top: 2rem;
 }
 
 /*onepage Menu*/
@@ -190,34 +178,14 @@ section.menu{
 }
 
 
-section.menu header{
-    height: auto;
-    position: absolute;
-    width: 90vw;
-    padding-left: 2rem;
-    top: 0;
-    left: 0;
-
-}
-
-body.menu {
-  background: whitesmoke;
-}
 
 section.menu main{
     width: 80vw;
-    min-height: 70vh;
-    padding-bottom: 4rem;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
-}
-
-section.menu footer{
-    width: 100%;
-    position: fixed;
-
+    padding-bottom: 5vh;
 }
 
 section.menu h2{
@@ -245,14 +213,6 @@ section.alert{
     display: block;
 
 }
-section.alert header{
-    height: auto;
-    text-align: center;
-    width: 100vw;
-    top: 0;
-
-    }
-
 
 
 section.alert main{
@@ -283,14 +243,7 @@ section.login{
     min-height: -webkit-fill-available;
 }
 
-section.login header{
-    height: auto;
-    position: absolute;
-    width: 100vw;
-    text-align: center;
-    top: 0;
-    left: 0;
-}
+
 
 body.login {
   background: whitesmoke;
@@ -306,11 +259,34 @@ section.login main{
 
 }
 
+.footerloggout {
+  width: 100%; /* Full-width */
+  background-color: #555; /* Dark-grey background */
+  overflow: auto; /* Overflow due to float */
+}
+
+.footerloggout a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font size */
+}
+
 
 .iconfooter{
   color: black;
   font-size: 1.5rem;
 }
+
+.iconloggout{
+  color: black;
+  font-size: 1.5rem;
+}
+
+
+
 
 
 .icon{
@@ -502,9 +478,7 @@ label{
       margin-top: 0;
   }
 
-  main{
-    display: none;
-  }
+
   nav{
     display: none;
   }

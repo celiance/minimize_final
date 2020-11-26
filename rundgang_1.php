@@ -8,4 +8,3 @@
             <button type="button" name="button" onclick="window.location.href='/rundgang_2.php'">
               <i class="fas fa-arrow-circle-right fa-3x"></i>
         </main>
-<?php include 'footerloggout.php';?>
