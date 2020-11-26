@@ -1,4 +1,6 @@
-<?php include 'header.php';?>
+
+
+<?php include ('header.php');?>
     <section class="onepage">
         <main>
              <h2>Weniger Konsum (1).</h2>

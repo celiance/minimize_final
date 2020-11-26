@@ -24,7 +24,8 @@
 
   <!-- MAIN MAIN -->
   <main>
-    <div class="main-content">
+
+    <div class="profilupdate">
 
       <!--Produktanzeige-->
       <h2><?php echo $user['name']; ?></h2>

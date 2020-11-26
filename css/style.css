@@ -72,13 +72,7 @@ section.onepage{
     position: fixed;
 
 }
-section.onepage header{
-    position: absolute;
-    width: 90vw;
-    padding-left: -2rem;
-    top: 0;
-    left: 0;
-}
+
 section.onepage main{
     width: 80vw;
     min-height: 50vh;
@@ -431,6 +425,7 @@ a:hover, a:active{
   color: var(--black);
   margin-top: 1rem;
   grid-template-columns: 1fr 2fr;
+  box-shadow:  2px -4px 8px #b7b7b7, -3px 3px 12px #ffffff;
 
 }
 
@@ -513,6 +508,14 @@ label{
   nav{
     display: none;
   }
+
+
+section.rot header {
+  background-color: red;
+}
+
+
+
 
 
  }

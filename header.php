@@ -33,6 +33,7 @@
   <body>
 
     <!-- HEADER HEADER -->
+    <section class="<?php echo $unterscheidung ?>">
     <header>
       <a href="index.php">
         <img src="../assets/minimizelogo.png" alt="Logo" width="120px" id="logo">
