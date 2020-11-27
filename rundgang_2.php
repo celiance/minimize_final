@@ -1,5 +1,6 @@
-<?php $unterscheidung= 'pfeil';
- ?>
+<?php
+  $unterscheidung = true;
+?>
 <?php include ('header.php');?>
     <section class="onepage">
         <main>

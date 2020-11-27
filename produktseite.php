@@ -1,20 +1,37 @@
+<?php
+  $unterscheidung = true;
+?>
+
 <?php include 'header.php';?>
   <!-- MAIN MAIN -->
-  <main>
-    <div class="main-content">
-      <h2>Produktseite</h2>
-
+  <body class="produktseite">
       <!--Produktanzeige-->
-      <h2>Produkt Nr. 1</h2>
-      <div class="">
-        <img src="assets/testbild.jpg" alt="bild des Produktes">
-        <p>Beschreibugn vom Produkt hier kommt bizli Text und so.</p>
-        <h5>Gekauft am</h5>
-        <h5>17/05/20</h5>
+      <div class="produktonly">
+        <main>
+          <div class="inhaltproduktonly">
+              <h3> Stabmixer Super Turbo </h3>
+              <img class="testbild" src="assets/testbild.jpg" alt="testbild" width="100">
+              <p> hier kommt eine Bescheibung zum Produkt</p>
+              <p> Gekauft am </p>
+              <p> 5.12.12</p>
+              <a href="">
+                <button class="produktonlyedit">
+                  <i class="fas fa-pen"></i>
+                </button>
+              </a>
+          </div>
       </div>
 
-      <button type="button" name="button" onclick="window.location.href='/produktVerkaufen.php'">Produkt verkaufen</button>
-      <h5 class="delete">Produkt löschen</h5>
-    </div>
-  </main>
+      <div class="quittungbox">
+        <a href="">
+        <p>Quittung ansehen</p>
+          <button>
+            <i class="fas fa-arrow-circle-right fa-2x"></i>
+          </button>
+        </a>
+      </div>
+
+    <button class="löschen"type="submit" name="register_submit" value="registrieren">Produkt löschen</button>
+
+    </main>
 <?php include 'footer.php';?>

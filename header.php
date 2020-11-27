@@ -23,6 +23,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -33,9 +34,15 @@
   <body>
 
     <!-- HEADER HEADER -->
-    <section class="<?php echo $unterscheidung ?>">
+    <section>
     <header>
+      <!--Pfeil anetue-->
+      <?php if ($unterscheidung) { ?>
+      <button type="button" name="button" onclick="window.history.back()" id="pfeil">
+        <i class="fas fa-arrow-left fa-1.5x"></i>
+    <?php } else { ?>
       <a href="index.php">
         <img src="../assets/minimizelogo.png" alt="Logo" width="120px" id="logo">
       </a>
+    <?php } ?>
     </header>

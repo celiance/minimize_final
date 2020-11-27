@@ -1,6 +1,6 @@
 
 <?php include 'header.php';?>
-  <body class="menu">
+  <body>
     <section class="menu">
         <main>
             <div class="menu">

@@ -65,11 +65,15 @@
 
 
   <!-- MAIN MAIN -->
+<?php
+  $unterscheidung = true;
+?>
 <?php include 'header.php';?>
   <body>
     <section class="register">
         <main>
-             <p>Bitte Registreire dich um minimize zu nutzen</p>
+             <h2>Bitte Registreire dich um minimize zu nutzen</h2>
+             <div class="register">
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <label for="name">Dein Name</label><br>
                 <input type="text" name="name" value="" class="name"></br>
@@ -82,11 +86,10 @@
 
                 <button type="submit" name="register_submit" value="registrieren">Registrieren</button>
               </form>
+            </div>
           <?php if(!empty($msg)){ ?>
           <div class="nachricht" role="alert">
             <p><?php echo $msg ?></p>
           </div>
           <?php } ?>
         </main>
-
-  <?php include 'footerloggout.php';?>

@@ -1,4 +1,5 @@
 <?php include 'header.php';?>
+<body>
     <section class="onepage">
         <main>
              <h2>Rundgang starten.</h2>
@@ -7,4 +8,4 @@
               <i class="fas fa-arrow-circle-right fa-3x"></i>
         </main>
 
-<?php include 'footerloggout.php';?>
+<?php include 'footer.php';?>
