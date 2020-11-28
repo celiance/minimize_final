@@ -6,27 +6,29 @@
             <div class="menu">
                 <p>Über minimize</p>
 
-                <a href="/MeinInventar.php">
+                <a href="/about.php">
                   <button>
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
               </div>
+
 
               <div class="menu">
                 <p>Hilfe</p>
 
-                <a href="/MeinInventar.php">
+                <a href="/help.php">
                   <button>
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
               </div>
 
+
               <div class="menu">
                 <p>Impressum</p>
 
-                <a href="/MeinInventar.php">
+                <a href="/impressum.php">
                   <button>
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>

@@ -8,6 +8,14 @@
 
         <main>
             <h2>Mein Inventar</h2>
+  
+
+            <div class="container">
+	             <div class="searchbox">
+		               <input type="text"placeholder="Suche">
+		                 <span></span>
+	                  </div>
+            </div>
 
             <div class="produktbox">
                 <a href="/produktseite.php">

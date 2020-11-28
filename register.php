@@ -72,17 +72,17 @@
   <body>
     <section class="register">
         <main>
-             <h2>Bitte Registreire dich um minimize zu nutzen</h2>
+             <h2>Ready to minimize?</h2>
+             <p>Erstelle ein Konto und erfasse gleich dein erstes Produkt</p>
              <div class="register">
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-                <label for="name">Dein Name</label><br>
-                <input type="text" name="name" value="" class="name"></br>
+                <input type="text" placeholder="Dein Name" name="name" value="" class="name"></br>
 
-                <label for="email">E-Mail</label></br>
-                <input type="email" name="email" value="<?php if(isset($email)) echo $email; ?>" class="email"></br>
 
-                <label for="password">Passwort</label></br>
-                <input type="password" name="password" value="" class="password"></br>
+                <input type="email" placeholder="Mailadresse" name="email" value="<?php if(isset($email)) echo $email; ?>" class="email"></br>
+
+
+                <input type="password" placeholder="Passwort" name="password" value="" class="password"></br>
 
                 <button type="submit" name="register_submit" value="registrieren">Registrieren</button>
               </form>

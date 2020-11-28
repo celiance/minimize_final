@@ -3,9 +3,9 @@
     <section class="home">
         <main>
             <h2>Hallo <?php echo $user['name']; ?></h2>
-
+            <h3> Was möchtest du tun?</h3>
               <div class="box">
-                <p>Mein Inventar</p>
+                <p>Mein Inventar ansehen</p>
 
                 <a href="/MeinInventar.php">
                   <button>
@@ -15,9 +15,9 @@
               </div>
 
               <div class="box">
-                <p>Noch in Gebrauch?</p>
+                <p>Brauchst du das noch?</p>
 
-                <a href="/MeinInventar.php">
+                <a href="/alert.php">
                   <button>
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>

@@ -60,6 +60,7 @@ header{
 h2{
   letter-spacing: var(--zeichenabstand);
   line-height: 40px;
+
 }
 
 p{
@@ -69,7 +70,9 @@ p{
 
 }
 
-section.register main{
+/*registrieren*/
+
+section.register{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -78,7 +81,10 @@ section.register main{
   margin-top: 50px;
   box-sizing: border-box;
 
+
 }
+
+
 
 section.register button{
   border: 1px solid black;
@@ -88,6 +94,46 @@ section.register button{
   padding: 10px;
   border-radius: 25px;
   margin-top: 45px;
+  letter-spacing: var(--zeichenabstand2);
+  font-size: var(--grösse2);
+}
+
+
+/*New Item*/
+
+section.newitem main{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70vh;
+  margin-top: 100px;
+  box-sizing: border-box;
+}
+
+
+
+.buttonnewitem{
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  width: 90vw;
+  height:30px;
+  border-radius: 25px;
+  margin-top: 45px;
+  letter-spacing: var(--zeichenabstand2);
+  font-size: var(--grösse2);
+}
+
+
+.buttondeleteitem{
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  width: 90vw;
+  height:30px;
+  border-radius: 25px;
+  margin-top: 10px;
   letter-spacing: var(--zeichenabstand2);
   font-size: var(--grösse2);
 }
@@ -187,6 +233,7 @@ section.inventar h2{
   padding-top: 2rem;
 }
 
+
 .alertbutton{
   border: solid 1px red;
   background-color: red;
@@ -201,6 +248,8 @@ section.inventar h2{
 .alertbutton span{
   padding-left: 6px;
 }
+
+
 
 
 
@@ -589,6 +638,44 @@ body.produkt {
 
 }
 
+/*NavProfile Onepage*/
+
+
+section.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+
+section.profile main{
+    width: 80vw;
+    min-height: 80vh;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+
+.navprofilelink {
+  display: flex;
+  font-size: var(--grösse2);
+  letter-spacing: var(--zeichenabstand2);
+  color: black;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.iconsprofil{
+  margin-right: 50px;
+
+}
+
+
 
 
 .testbild{
@@ -608,9 +695,8 @@ input{
   border: 1px solid black;
   border-radius: 25px;
   box-shadow: 1px 1px 10px lightgrey;
-  height:35px;
-  width: 90vw;
-  margin-top: 20px;
+  height: 25px;
+  width: 85vw;
   margin-bottom: 50px;
 
 }
