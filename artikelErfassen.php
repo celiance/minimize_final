@@ -58,7 +58,6 @@
     }else{
       $alert_type = "alert-warning";
     }
-
   }
 
 ?>
