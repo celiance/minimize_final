@@ -4,6 +4,7 @@
   $unterscheidung = true;
   $all_products = get_product($user_id);
 
+
 ?>
 
 
@@ -30,7 +31,13 @@
                     <!--Angaben Produkt-->
                     <div class="alerttext">
                         <p><?php echo $product['product_name']; ?></p>
-                        <h6><?php echo $product['purchase_date']; ?></h6>
+                        <h6>
+                          Gekauft im:</br>
+                          <?php
+                            $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
+                            echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
+                          ?>
+                      </h6>
                     </div>
                     <div class="alertbutton">
                       <span> 1 </span>
