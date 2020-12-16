@@ -67,7 +67,7 @@ h2{
 }
 
 p{
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   font-weight: 300;
   font-size: var(--grösse2);
   line-height: var(--zeilenabstand);
@@ -651,6 +651,7 @@ body.produkt {
   align-items: center;
   padding-bottom: 1rem;
   padding-left: 0.5rem;
+  padding-right: 0.5rem;
 
 }
 

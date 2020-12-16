@@ -6,8 +6,7 @@
             <div class="menu">
                 <p>Über minimize</p>
 
-                <a href="/about.php">
-                  <button>
+                  <button type="button" name="button" onclick="window.location.href='/about.php'">
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
@@ -16,9 +15,7 @@
 
               <div class="menu">
                 <p>Hilfe</p>
-
-                <a href="/help.php">
-                  <button>
+                  <button type="button" name="button" onclick="window.location.href='/help.php'">
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
@@ -27,9 +24,7 @@
 
               <div class="menu">
                 <p>Impressum</p>
-
-                <a href="/impressum.php">
-                  <button>
+                <button type="button" name="button" onclick="window.location.href='/impressum.php'">
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>

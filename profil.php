@@ -6,42 +6,38 @@
             <div class="menu">
                 <p><?php echo $user['name']; ?></p>
 
-                <a href="">
-                  <button>
-                    <i class="fas fa-edit fa-2x"></i>
-                  </button>
-                </a>
               </div>
 
 
               <div class="menu">
                 <p><?php echo $user['email']; ?></p>
-
-                <a href="">
-                  <button>
-                    <i class="fas fa-edit fa-2x"></i>
-                  </button>
-                </a>
               </div>
 
 
               <div class="menu">
                 <p>Passwort ***</p>
-                <a href="">
+
                   <button>
-                    <i class="fas fa-edit fa-2x"></i>
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
               </div>
 
-              <button type="button" name="button" onclick="window.location.href='/index.php'">
+              <div class="menu">
                 <p>Ausloggen</p>
-              </button>
+
+                <button type="button" name="button" onclick="window.location.href='/index.php'">
+                  <i class="fas fa-arrow-circle-right fa-2x"></i>
+                </button>
+              </div>
+
 
               <div class="menu">
-                <a href="">
                 <p>Profil löschen</p>
-                </a>
+
+                <button type="button" name="button" onclick="window.location.href='/index.php'">
+                  <i class="fas fa-arrow-circle-right fa-2x"></i>
+                </button>
               </div>
 
 
