@@ -1,8 +1,9 @@
 <!-- MAIN MAIN -->
 <?php
-$unterscheidung = true;
+  $unterscheidung = true;
+  include 'header.php';
+  include 'login-wall.php';
 ?>
-<?php include 'header.php';?>
 <body>
   <section class="newitem">
       <main>

@@ -1,4 +1,9 @@
-<?php include 'header.php';?>
+<?php
+
+  include 'header.php';
+  include 'login-wall.php';
+
+?>
   <!-- MAIN MAIN -->
   <main>
     <h2>Produkt verkaufen</h2>

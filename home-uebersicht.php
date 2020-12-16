@@ -1,4 +1,9 @@
-<?php include 'header.php';?>
+<?php
+
+  include 'header.php';
+  include 'login-wall.php';
+
+?>
   <body class="home">
     <section class="home">
         <main>

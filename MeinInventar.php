@@ -1,6 +1,7 @@
 <?php
 
   include ('header.php');
+  include 'login-wall.php';
   $unterscheidung = true;
   $all_products = get_product($user_id);
 

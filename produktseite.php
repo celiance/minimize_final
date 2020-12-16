@@ -1,15 +1,17 @@
 <?php
 
   include ('header.php');
+  include 'login-wall.php';
   $unterscheidung = true;
 
   if(isset($_GET['product_id'])){
     $product_id = $_GET['product_id'];
     $product = get_product_by_id($product_id);
-    $product_name = $product['product_name'];
+    $productname = $product['product_name'];
+
 
   }else{
-    header("Location: ../index.php");
+    echo "hier fehlt etwas";
   }
 
 
@@ -20,7 +22,7 @@
       <div class="produktonly">
         <main>
           <div class="inhaltproduktonly">
-              <h3><?php echo $product_name; ?></h3>
+              <h3><?php echo $product['product_name']; ?></h3>
               <img class="testbild" src="assets/testbild.jpg" alt="testbild" width="100">
               <p><?php echo $product['description']; ?></p>
               <p>Gekauft am:</p>
