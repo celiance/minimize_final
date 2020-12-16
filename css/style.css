@@ -1,8 +1,7 @@
 /*IMPORT----------------------------------------*/
-/* SCHRIFT FIRA: font-family: 'Fira Sans', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-/* SCHRIFT BEBAS: font-family: 'Bebas Neue', cursive;*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;500&family=Work+Sans:wght@200&display=swap');
+
 
 
 
@@ -18,12 +17,11 @@
     --mobilenavisability:none;
 
 
-    /*H2*/
-    --zeichenabstand: 0.05em;
 
     /*p*/
-    --zeichenabstand2: 0.05em;
-    --grösse2: 110%;
+
+    --grösse2: 1.1em;
+    --grösse3: 1.3em;
     --zeilenabstand: 30px;
 }
 
@@ -36,12 +34,14 @@ body{
     -o-hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
-    font-family: 'Fira Sans', sans-serif;
+
     color: black;
     margin: 0;
     padding: 0;
     width: 100vw;
     height: 100vh;
+    font-family: "Heebo", sans-serif;
+
     min-height: -webkit-fill-available;
     padding: 1rem;
     box-sizing: border-box;
@@ -50,6 +50,7 @@ body{
 
 header{
   width: 80vw;
+  padding-left: 6vw;
   height: 10%;
   position: sticky;
 }
@@ -58,18 +59,27 @@ header{
 
 
 h2{
-  letter-spacing: var(--zeichenabstand);
+  letter-spacing: 0.05em;
   line-height: 40px;
+
+
 
 }
 
 p{
-  letter-spacing: var(--zeichenabstand2);
+  letter-spacing: 0.06em;
+  font-weight: 300;
   font-size: var(--grösse2);
   line-height: var(--zeilenabstand);
 
 }
 
+h3 {
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  font-size: var(--grösse2);
+  line-height: var(--zeilenabstand);
+}
 /*registrieren*/
 
 section.register{
@@ -199,6 +209,8 @@ section.home button {
   border: none;
   background-color: transparent;
 }
+
+
 
 section.home p {
   padding-left: 1rem;
@@ -389,6 +401,8 @@ section.login main{
 
 #logo{
   padding-top: 5%;
+
+
 }
 
 #pfeil {
@@ -604,7 +618,8 @@ body.produkt {
   border-radius: 25px;
   margin-left: 10px;
   margin-right: 10px;
-  letter-spacing: var(--zeichenabstand2);
+  letter-spacing: 0.07em;
+  font-weight: 300;
   font-size: var(--grösse2);
 }
 
@@ -618,7 +633,8 @@ body.produkt {
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 1rem;
-  letter-spacing: var(--zeichenabstand2);
+  letter-spacing: 0.07em;
+  font-weight: 300;
   font-size: var(--grösse2);
 }
 
