@@ -83,4 +83,27 @@ function get_product_push($owner_id){
 	return $result->fetchAll();
 }
 
+
+
+/* UPDATE Status */
+
+function update_status($status){
+	$db = get_db_connection();
+	$sql = "UPDATE products SET status=? WHERE id=?;";
+	$stmt = $db->prepare($sql);
+	return $stmt->execute(array($status));
+}
+
+
+/* DELETE BEFEHLE */
+
+function delete_profil($id){
+	$db = get_db_connection();
+	$sql = "DELETE FROM user WHERE id=?;";
+	$stmt = $db->prepare($sql);
+	return $stmt->execute(array($id));
+}
+
+
+
 ?>

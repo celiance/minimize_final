@@ -42,7 +42,7 @@
 
     if($product_valid){
 
-        $status = "in Gebrauch";
+        $status = $purchase_date;
         $result = product_input($img, $product_name, $purchase_date, $description, $status, $user_id);
 
         if($result){
