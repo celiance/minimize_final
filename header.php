@@ -33,7 +33,7 @@
 
     <!-- HEADER HEADER -->
     <header>
-      <a href="index.php">
+      <a href="home-uebersicht.php">
         <img src="assets/logo.png" alt="Logo" width="200px" id="logo">
       </a>
     </header>

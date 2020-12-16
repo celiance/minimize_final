@@ -1,7 +1,6 @@
 <?php
   session_start();
 
-
   require_once('system/config.php');
   require_once('system/data.php');
   include 'header.php';
@@ -43,7 +42,8 @@
 
     if($product_valid){
 
-        $result = product_input($img, $product_name, $purchase_date, $description, $user_id);
+        $status = "in Gebrauch";
+        $result = product_input($img, $product_name, $purchase_date, $description, $status, $user_id);
 
         if($result){
           unset($_POST);

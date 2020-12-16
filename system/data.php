@@ -60,11 +60,11 @@ function get_user_by_id($id){
 	return $result->fetch();
 }
 
-function product_input($img, $product_name, $purchase_date, $description, $owner_id){
+function product_input($img, $product_name, $purchase_date, $description, $status, $user_id){
 	$db = get_db_connection();
-	$sql = "INSERT INTO request (img, product_name, purchase_date, description, owner_id ) VALUES (?, ?, ?, ?, ?);";
+	$sql = "INSERT INTO request (img, product_name, purchase_date, description, status, owner_id ) VALUES (?, ?, ?, ?, ?);";
 	$stmt = $db->prepare($sql);
-	return $stmt->execute(array($img, $product_name, $purchase_date, $description, $owner_id));
+	return $stmt->execute(array($img, $product_name, $purchase_date, $description, $status, $owner_id));
 }
 
 ?>
