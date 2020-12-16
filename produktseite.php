@@ -2,7 +2,15 @@
 
   include ('header.php');
   $unterscheidung = true;
-  $all_products = get_product($user_id);
+
+  if(isset($_GET['product_id'])){
+    $product_id = $_GET['product_id'];
+    $product = get_product_by_id($product_id);
+    $product_name = $product['product_name'];
+
+  }else{
+    header("Location: ../index.php");
+  }
 
 
 ?>
@@ -12,11 +20,16 @@
       <div class="produktonly">
         <main>
           <div class="inhaltproduktonly">
-              <h3>Stabmixer Super Turbo </h3>
+              <h3><?php echo $product_name; ?></h3>
               <img class="testbild" src="assets/testbild.jpg" alt="testbild" width="100">
-              <p>hier kommt eine Bescheibung zum Produkt</p>
-              <p>Gekauft am </p>
-              <p>5.12.12</p>
+              <p><?php echo $product['description']; ?></p>
+              <p>Gekauft am:</p>
+              <p>
+                <?php
+                  $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
+                  echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
+                ?>
+              </p>
               <a href="">
                 <button class="produktonlyedit">
                   <i class="fas fa-pen"></i>

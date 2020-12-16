@@ -76,6 +76,13 @@ function get_product($owner_id){
 	return $result->fetchAll();
 }
 
+function get_product_by_id($product_id){
+	$db = get_db_connection();
+	$sql = "SELECT * FROM products WHERE id = $product_id;";
+	$result = $db->query($sql);
+	return $result->fetchAll();
+}
+
 function get_product_push($owner_id){
 	$db = get_db_connection();
 	$sql = "SELECT * FROM products WHERE owner_id = $owner_id AND purchase_date <= DATE_ADD(NOW(),INTERVAL -10 DAY) ORDER BY purchase_date;";

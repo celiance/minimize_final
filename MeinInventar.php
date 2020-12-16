@@ -24,7 +24,7 @@
             <div class="container">
               <!--Einzelnes Produkt-->
               <?php foreach ($all_products as $product) { ?>
-                <a href="/produktseite.php">
+                <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
                   <div class="produktbox">
                     <!--Produktbild-->
                     <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
