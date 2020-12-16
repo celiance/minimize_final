@@ -36,18 +36,13 @@
     <!-- HEADER HEADER -->
     <section>
     <header>
-<<<<<<< HEAD
-      <a href="home-uebersicht.php">
-        <img src="assets/logo.png" alt="Logo" width="200px" id="logo">
-=======
       <!--Pfeil anetue-->
       <?php if ($unterscheidung) { ?>
       <button type="button" name="button" onclick="window.history.back()" id="pfeil">
         <i class="fas fa-arrow-left fa-1.5x"></i>
     <?php } else { ?>
-      <a href="index.php">
+      <a href="home-uebersicht.php">
         <img src="../assets/minimizelogo.png" alt="Logo" width="120px" id="logo">
->>>>>>> be9de7fe7dcccd6bab2413f3e522d8703387e477
       </a>
     <?php } ?>
     </header>

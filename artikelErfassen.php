@@ -38,7 +38,7 @@
       $product_valid = false;
     }
 
-    // Daten in die Datenbank schreiben ********
+    // Daten in die Datenbank schreiben
 
     if($product_valid){
 
