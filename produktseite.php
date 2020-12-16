@@ -1,6 +1,7 @@
 <?php
 
   include ('header.php');
+  include 'login-wall.php';
   $unterscheidung = true;
 
   if(isset($_GET['product_id'])){

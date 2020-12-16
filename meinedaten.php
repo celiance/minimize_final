@@ -1,7 +1,10 @@
 <?php
+
+  include 'header.php';
+  include 'login-wall.php';
   $unterscheidung = true;
+
 ?>
-<?php include 'header.php';?>
   <body>
     <section class="profile">
         <main>

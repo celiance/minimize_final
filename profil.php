@@ -1,5 +1,8 @@
 
-<?php include 'header.php';
+<?php
+
+  include 'header.php';
+  include 'login-wall.php';
 
   if(isset($_POST['delete-profil'])){
     if($logged_in){
@@ -17,8 +20,6 @@
   <body>
     <section class="menu">
         <main>
-
-
               <div class="menu">
                 <p><?php echo $user['name']; ?></p>
                   <a href="">
@@ -27,8 +28,6 @@
                     </button>
                   </a>
                 </div>
-
-
 
               <div class="menu">
                 <p><?php echo $user['email']; ?></p>
@@ -39,7 +38,6 @@
                 </a>
               </div>
 
-
               <div class="menu">
                 <p>Passwort *****</p>
                 <a href="">
@@ -49,7 +47,6 @@
                 </a>
               </div>
 
-
               <div class="menu">
                 <p>Ausloggen</p>
                 <a href="">
@@ -58,7 +55,6 @@
                   </button>
                 </a>
               </div>
-
 
               <div class="menu">
                 <p>Profil löschen</p>
