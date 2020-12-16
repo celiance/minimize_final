@@ -2,7 +2,7 @@
 
   include ('header.php');
   $unterscheidung = true;
-  $all_products = get_product();
+  $all_products = get_product($user_id);
 
 ?>
 
@@ -13,31 +13,32 @@
         <main>
             <h2>Mein Inventar</h2>
             <div class="container">
+            <!--Suchfeld-->
 	             <div class="searchbox">
 		               <input type="text"placeholder="Suche">
 		                 <span></span>
 	             </div>
             </div>
-            <div class="alle_produkte">
+            <!--Alle Produkte-->
+            <div class="container">
+              <!--Einzelnes Produkt-->
               <?php foreach ($all_products as $product) { ?>
-
-              <div class="produktbox">
-
-                  <a href="/produktseite.php">
+                <a href="/produktseite.php">
+                  <div class="produktbox">
+                    <!--Produktbild-->
                     <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
-                  </a>
-
-
-              <div class="alerttext">
-                  <p><?php echo $product['product_name']; ?></p>
-                  <h6><?php echo $product['purchase_date']; ?></h6>
-              </div>
-
-              <div class="alertbutton">
-                <span> 1 </span>
-              </div>
+                    <!--Angaben Produkt-->
+                    <div class="alerttext">
+                        <p><?php echo $product['product_name']; ?></p>
+                        <h6><?php echo $product['purchase_date']; ?></h6>
+                    </div>
+                    <div class="alertbutton">
+                      <span> 1 </span>
+                    </div>
+                  </div>
+                </a>
               <?php }?>
-            </div>
+
           </div>
 
 

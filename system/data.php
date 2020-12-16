@@ -69,9 +69,9 @@ function product_input($img, $product_name, $purchase_date, $description, $statu
 
 
 
-function get_product(){
+function get_product($owner_id){
 	$db = get_db_connection();
-	$sql = "SELECT * FROM products ORDER BY id DESC;";
+	$sql = "SELECT * FROM products WHERE owner_id = $owner_id ORDER BY purchase_date;";
 	$result = $db->query($sql);
 	return $result->fetchAll();
 }
