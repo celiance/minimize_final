@@ -85,7 +85,7 @@
                 <p><?php echo $msg ?></p>
               </div>
               <?php } ?>
-              
+
               <a href="register.php">
                 <h6>Du bist noch nicht registriert? Hier entlang!</h6>
               </a>
@@ -95,6 +95,4 @@
     </div>
 
 
-
-  </body>
-</html>
+  <?php include "footer.php";?>

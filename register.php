@@ -97,3 +97,5 @@
           </div>
           <?php } ?>
         </main>
+
+      <?php include "footer.php";?>
