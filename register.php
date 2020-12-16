@@ -86,6 +86,9 @@
 
                 <button type="submit" name="register_submit" value="registrieren">Registrieren</button>
               </form>
+              <button type="button" name="button" onclick="window.location.href='/login.php'">
+                <p>Du bist schon registriert? Logge dich hier ein.</p>
+              </button>
             </div>
           <?php if(!empty($msg)){ ?>
           <div class="nachricht" role="alert">

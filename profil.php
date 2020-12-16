@@ -4,7 +4,7 @@
     <section class="menu">
         <main>
             <div class="menu">
-                <p>Hier NAme aus DB</p>
+                <p><?php echo $user['name']; ?></p>
 
                 <a href="">
                   <button>
@@ -15,7 +15,7 @@
 
 
               <div class="menu">
-                <p>E-Mail</p>
+                <p><?php echo $user['email']; ?></p>
 
                 <a href="">
                   <button>
@@ -26,7 +26,7 @@
 
 
               <div class="menu">
-                <p>Passwort</p>
+                <p>Passwort ***</p>
 
                 <a href="">
                   <button>
