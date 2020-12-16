@@ -53,7 +53,7 @@
           <!-- LOGIN -->
           <main>
             <section class="login">
-      
+
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <div>
                   <label for="email">E-Mail</label></br>

@@ -27,11 +27,20 @@
 
               <div class="menu">
                 <p>Passwort ***</p>
-
                 <a href="">
                   <button>
                     <i class="fas fa-edit fa-2x"></i>
                   </button>
+                </a>
+              </div>
+
+              <button type="button" name="button" onclick="window.location.href='/index.php'">
+                <p>Ausloggen</p>
+              </button>
+
+              <div class="menu">
+                <a href="">
+                <p>Profil löschen</p>
                 </a>
               </div>
 
