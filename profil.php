@@ -17,23 +17,24 @@
   <body>
     <section class="menu">
         <main>
-            <div class="menu">
-                <p><?php echo $user['name']; ?></p>
 
-                <a href="">
-                  <button>
-                    <i class="fas fa-edit fa-2x"></i>
-                  </button>
-                </a>
-              </div>
+
+              <div class="menu">
+                <p><?php echo $user['name']; ?></p>
+                  <a href="">
+                    <button type="button" name="button">
+                      <i class="fas fa-arrow-circle-right fa-2x"></i>
+                    </button>
+                  </a>
+                </div>
+
 
 
               <div class="menu">
                 <p><?php echo $user['email']; ?></p>
-
                 <a href="">
-                  <button>
-                    <i class="fas fa-edit fa-2x"></i>
+                  <button type="button" name="button">
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
               </div>
@@ -42,20 +43,31 @@
               <div class="menu">
                 <p>Passwort *****</p>
                 <a href="">
-                  <button>
-                    <i class="fas fa-edit fa-2x"></i>
+                  <button type="button" name="button">
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
               </div>
 
-              <button type="button" name="button" onclick="window.location.href='/index.php'">
+
+              <div class="menu">
                 <p>Ausloggen</p>
-              </button>
+                <a href="">
+                  <button type="button" name="button" onclick="window.location.href='/index.php'">
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
+                  </button>
+                </a>
+              </div>
 
 
+              <div class="menu">
+                <p>Profil löschen</p>
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-                  <button type="submit" name="delete-profil">Profil löschen</button>
+                  <button type="submit" name="delete-profil">
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
+                  </button>
               </form>
+              </div>
 
 
 

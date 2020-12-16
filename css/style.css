@@ -157,7 +157,7 @@ section.onepage{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 70vh;
+    height: 80vh;
     width: 80vw;
     box-sizing: border-box;
     position: fixed;
@@ -178,6 +178,15 @@ section.onepage h2{
 
 section.onepage p{
   margin-left: 20px;
+}
+
+section.onepage h6{
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  font-size: var(--grösse2);
+  line-height: var(--zeilenabstand);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 
