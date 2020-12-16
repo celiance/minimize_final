@@ -1,4 +1,15 @@
-<?php include 'header.php';?>
+<?php
+  include 'header.php';
+
+  if(isset($_SESSION['userid'])) {
+    unset($_SESSION['userid']);
+    session_destroy();
+    }
+
+  $logged_in = false;
+
+
+?>
 <body>
     <section class="onepage">
         <main>

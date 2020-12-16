@@ -60,11 +60,20 @@ function get_user_by_id($id){
 	return $result->fetch();
 }
 
-function product_input($img, $product_name, $purchase_date, $description, $status, $user_id){
+function product_input($img, $product_name, $purchase_date, $description, $status, $owner_id){
 	$db = get_db_connection();
-	$sql = "INSERT INTO request (img, product_name, purchase_date, description, status, owner_id ) VALUES (?, ?, ?, ?, ?);";
+	$sql = "INSERT INTO products (img, product_name, purchase_date, description, status, owner_id ) VALUES (?, ?, ?, ?, ?);";
 	$stmt = $db->prepare($sql);
 	return $stmt->execute(array($img, $product_name, $purchase_date, $description, $status, $owner_id));
+}
+
+
+
+function get_product($owner_id){
+	$db = get_db_connection();
+	$sql = "SELECT * FROM products WHERE owner_id = $owner_id ORDER BY purchase_date;";
+	$result = $db->query($sql);
+	return $result->fetchAll();
 }
 
 ?>

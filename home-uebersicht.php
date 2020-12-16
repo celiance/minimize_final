@@ -2,7 +2,7 @@
   <body class="home">
     <section class="home">
         <main>
-            <h2>Hallo <?php echo $user['name']; ?></h2>
+            <h2>Hallo <?php echo $user['name']; ?>!</h2>
             <h3> Was möchtest du tun?</h3>
               <div class="box">
                 <p>Mein Inventar ansehen</p>

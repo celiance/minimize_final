@@ -1,69 +1,54 @@
 <?php
+
+  include ('header.php');
   $unterscheidung = true;
+  $all_products = get_product($user_id);
+
+
 ?>
 
-<?php include ('header.php');?>
+
   <body class="inventar">
     <section class="inventar navbackground">
 
         <main>
             <h2>Mein Inventar</h2>
             <div class="container">
+            <!--Suchfeld-->
 	             <div class="searchbox">
 		               <input type="text"placeholder="Suche">
 		                 <span></span>
-	                  </div>
+	             </div>
             </div>
-            <div class="produktbox">
+            <!--Alle Produkte-->
+            <div class="container">
+              <!--Einzelnes Produkt-->
+              <?php foreach ($all_products as $product) { ?>
                 <a href="/produktseite.php">
-                  <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
+                  <div class="produktbox">
+                    <!--Produktbild-->
+                    <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
+                    <!--Angaben Produkt-->
+                    <div class="alerttext">
+                        <p><?php echo $product['product_name']; ?></p>
+                        <h6>
+                          Gekauft im:</br>
+                          <?php
+                            $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
+                            echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
+                          ?>
+                      </h6>
+                    </div>
+                    <div class="alertbutton">
+                      <span> 1 </span>
+                    </div>
+                  </div>
                 </a>
-
-              <div class="alerttext">
-                <p> Stabmixer Super Turbo</p>
-                <h6> 5.12.12</h6>
-
-            </div>
-            <div class="alertbutton">
-              <span> 1 </span>
-            </div>
-          </div>
-
-          <div class="produktbox">
-              <a href="/produktseite.php">
-                <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
-              </a>
-
-            <div class="alerttext">
-              <p> Stabmixer Super Turbo</p>
-              <h6> 5.12.12</h6>
+              <?php }?>
 
           </div>
-        </div>
 
 
-
-      <div class="produktbox">
-          <a href="/produkseite.php">
-            <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
-          </a>
-
-        <div class="alerttext">
-          <p> Stabmixer Super Turbo</p>
-          <h6> 5.12.12</h6>
-      </div>
-    </div>
-
-
-    <div class="produktbox">
-        <a href="/produkseite.php">
-          <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
-        </a>
-
-      <div class="alerttext">
-        <p> Stabmixer Super Turbo</p>
-        <h6> 5.12.12</h6>
-    </div>
   </div>
 
 </main>
