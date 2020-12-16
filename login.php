@@ -53,6 +53,7 @@
           <!-- LOGIN -->
           <main>
             <section class="login">
+              <h2>Bitte logge dich ein um die Funktionen von minimize zu nutzen.</h2>
 
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <div>

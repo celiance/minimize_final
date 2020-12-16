@@ -13,9 +13,6 @@
   }else{
     $logged_in = false;
     $log_in_out_text = "Anmelden";
-
-  //Umleitung zu Login, falls noch nicht eingeloggt
-  //  header("Location: https://minimize.celiance.ch/login.php");
   }
 
 ?>
