@@ -14,7 +14,7 @@
       <i class="fas fa-home"></i>
   </div>
 
-  <a href="/artikel-erfassen.php">
+  <a href="/artikelErfassen.php">
     <div class="iconfooter">
       <i class="fas fa-plus-circle"></i>
   </div>

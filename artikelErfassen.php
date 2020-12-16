@@ -50,11 +50,9 @@
           $msg = "Du hast das Produkt erfolgreich erfasst.</br>";
           header('Location: https://minimize.celiance.ch/produktseite.php');
 
-
         }else{
           $msg .= "Etwas hat nicht geklappt. Versuche es nochmal.</br>";
         }
-      }
     }else{
       $alert_type = "alert-warning";
     }
