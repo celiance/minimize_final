@@ -74,6 +74,7 @@
         <main>
              <h2>Ready to minimize?</h2>
              <p>Erstelle ein Konto und erfasse gleich dein erstes Produkt</p>
+
              <div class="register">
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <input type="text" placeholder="Dein Name" name="name" value="" class="name"></br>
@@ -86,9 +87,9 @@
 
                 <button type="submit" name="register_submit" value="registrieren">Registrieren</button>
               </form>
-              <button type="button" name="button" onclick="window.location.href='/login.php'">
-                <p>Du bist schon registriert? Logge dich hier ein.</p>
-              </button>
+              <a href="login.php">
+                <h6>Du bist noch nicht registriert? Hier entlang!</h6>
+              </a>
             </div>
           <?php if(!empty($msg)){ ?>
           <div class="nachricht" role="alert">

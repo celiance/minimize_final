@@ -45,6 +45,8 @@ body{
     min-height: -webkit-fill-available;
     padding: 1rem;
     box-sizing: border-box;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(217,217,217,1) 100%);
 
 }
 
@@ -84,18 +86,35 @@ h3 {
 
 /*registrieren*/
 
+
 section.register{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: -webkit-fill-available;
+}
 
-  height: 70vh;
-  margin-top: 50px;
-  box-sizing: border-box;
-
+section.register main{
+    width: 80vw;
+    min-height: 80vh;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
 }
 
+
+section.register h6 {
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    font-size: var(--grösse2);
+    line-height: var(--zeilenabstand);
+    margin-bottom: 0;
+    margin-top: 2em;
+    color: black;
+  }
 
 
 section.register button{
@@ -180,7 +199,7 @@ section.onepage p{
   margin-left: 20px;
 }
 
-section.onepage h6{
+h6{
   letter-spacing: 0.05em;
   font-weight: 300;
   font-size: var(--grösse2);
@@ -376,21 +395,50 @@ section.login{
     min-height: -webkit-fill-available;
 }
 
-
-
-body.login {
-  background: whitesmoke;
-}
-
 section.login main{
     width: 80vw;
-    min-height: 70vh;
+    min-height: 80vh;
     padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
 }
+
+body.login {
+  background: whitesmoke;
+}
+
+
+
+section.login button{
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  width: 80vw;
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 45px;
+  letter-spacing: var(--zeichenabstand2);
+  font-size: var(--grösse2);
+}
+
+section.login h6 {
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    font-size: var(--grösse2);
+    line-height: var(--zeilenabstand);
+    margin-bottom: 0;
+    margin-top: 2em;
+    color: black;
+  }
+
+
+
+
+
+
+
 
 .footerloggout {
   width: 100%; /* Full-width */
@@ -755,8 +803,9 @@ input{
 
 label{
   margin: 50px 0px;
+  letter-spacing: 0.05em;
+  font-weight: 300;
   font-size: var(--grösse2);
-  letter-spacing: var(--zeichenabstand2);
 
 }
 

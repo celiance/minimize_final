@@ -51,29 +51,43 @@
   }
 ?>
           <!-- LOGIN -->
-          <main>
-            <section class="login">
-              <h2>Bitte logge dich ein um die Funktionen von minimize zu nutzen.</h2>
 
-              <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+
+ <?php
+  $unterscheidung = true;
+  ?>
+  <?php include 'header.php';?>
+    <body>
+        <section class="login">
+          <main>
+               <p>Logge dich ein um minimize zu nutzen.</p>
+
+
+               <div class="register">
+                 <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <div>
                   <label for="email">E-Mail</label></br>
                   <input type="text" name="email" value="" id="email"></br>
                 </div>
+
                 <div>
                   <label for="password">Passwort</label></br>
                   <input type="password" name="password" value="" id="password"></br>
                 </div>
-                <button type="submit" name="login_submit" value="einloggen">Anmelden</button>
+
+                <button type="submit" name="login_submit" value="login">Einloggen</button>
               </form>
+
+
               <!-- Nachricht -->
               <?php if(!empty($msg)){ ?>
               <div class="nachricht" role="alert">
                 <p><?php echo $msg ?></p>
               </div>
               <?php } ?>
+              
               <a href="register.php">
-                <p>Du bist noch nicht registriert? Hier entlang!</p>
+                <h6>Du bist noch nicht registriert? Hier entlang!</h6>
               </a>
             </section>
           </main>
