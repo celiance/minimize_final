@@ -1,21 +1,40 @@
+
 <?php include 'header.php';?>
-  <!-- MAIN MAIN -->
-  <main>
-    <div class="main-content">
-      <h2>Menu</h2>
-        <ul>
-          <li>
-            <a href="/about.php">About</a>
-          </li><br>
-          <li>
-            <a href="/impressum.php">Impressum</a>
-          </li><br>
-          <li class="">
-            <a href="/contact.php">Kontakt</a>
-          </li>
-        </ul>
+  <body>
+    <section class="menu">
+        <main>
+            <div class="menu">
+                <p>Über minimize</p>
 
-    </div>
+                <a href="/about.php">
+                  <button>
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
+                  </button>
+                </a>
+              </div>
 
-  </main>
-<?php include 'footer.php';?>
+
+              <div class="menu">
+                <p>Hilfe</p>
+
+                <a href="/help.php">
+                  <button>
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
+                  </button>
+                </a>
+              </div>
+
+
+              <div class="menu">
+                <p>Impressum</p>
+
+                <a href="/impressum.php">
+                  <button>
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
+                  </button>
+                </a>
+              </div>
+
+
+        </main>
+  <?php include "footer.php";?>

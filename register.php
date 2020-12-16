@@ -5,7 +5,7 @@
 
   require_once('system/config.php');
   require_once('system/data.php');
-  include 'header.php';
+
 
 
   $logged_in = false;
@@ -65,24 +65,31 @@
 
 
   <!-- MAIN MAIN -->
-  <main>
-    <div class="main-content">
-      <h2>Registriere dich jetzt</h2>
-      <p>Hier kommt ein fancy Text.</p>
-      <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-        <label for="name">Dein Name</label><br>
-        <input type="text" name="name" value="" class="name"></br>
-        <label for="email">E-Mail</label></br>
-        <input type="email" name="email" value="<?php if(isset($email)) echo $email; ?>" class="email"></br>
-        <label for="password">Passwort</label></br>
-        <input type="password" name="password" value="" class="password"></br>
-        <button type="submit" name="register_submit" value="registrieren">Registrieren</button>
-      </form>
-      <?php if(!empty($msg)){ ?>
-      <div class="nachricht" role="alert">
-        <p><?php echo $msg ?></p>
-      </div>
-      <?php } ?>
-    </div>
-  </main>
-<?php include 'footer.php';?>
+<?php
+  $unterscheidung = true;
+?>
+<?php include 'header.php';?>
+  <body>
+    <section class="register">
+        <main>
+             <h2>Ready to minimize?</h2>
+             <p>Erstelle ein Konto und erfasse gleich dein erstes Produkt</p>
+             <div class="register">
+              <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+                <input type="text" placeholder="Dein Name" name="name" value="" class="name"></br>
+
+
+                <input type="email" placeholder="Mailadresse" name="email" value="<?php if(isset($email)) echo $email; ?>" class="email"></br>
+
+
+                <input type="password" placeholder="Passwort" name="password" value="" class="password"></br>
+
+                <button type="submit" name="register_submit" value="registrieren">Registrieren</button>
+              </form>
+            </div>
+          <?php if(!empty($msg)){ ?>
+          <div class="nachricht" role="alert">
+            <p><?php echo $msg ?></p>
+          </div>
+          <?php } ?>
+        </main>

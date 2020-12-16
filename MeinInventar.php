@@ -1,33 +1,73 @@
-<?php include 'header.php';?>
-  <!-- MAIN MAIN -->
-  <main>
-    <div class="main-content">
-      <h2>Mein Inventar</h2>
-      <p>Hier kommt ein fancy Text.</p>
+<?php
+  $unterscheidung = true;
+?>
 
-      <!--Produktanzeige-->
-      <a href="/produktseite.php">
-        <div class="box">
-          <img src="assets/testbild.jpg" alt="bild inventar 1">
-          <div class="inventarBilder">
-            <h3>Produkt Nr. 1</h3>
-            <h5>Gekauft am</h5>
-            <h5>17/05/20</h5>
+<?php include ('header.php');?>
+  <body class="inventar">
+    <section class="inventar navbackground">
+
+        <main>
+            <h2>Mein Inventar</h2>
+  
+
+            <div class="container">
+	             <div class="searchbox">
+		               <input type="text"placeholder="Suche">
+		                 <span></span>
+	                  </div>
+            </div>
+
+            <div class="produktbox">
+                <a href="/produktseite.php">
+                  <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
+                </a>
+
+              <div class="alerttext">
+                <p> Stabmixer Super Turbo</p>
+                <h6> 5.12.12</h6>
+
+            </div>
+            <div class="alertbutton">
+              <span> 1 </span>
+            </div>
+          </div>
+
+          <div class="produktbox">
+              <a href="/produktseite.php">
+                <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
+              </a>
+
+            <div class="alerttext">
+              <p> Stabmixer Super Turbo</p>
+              <h6> 5.12.12</h6>
+
           </div>
         </div>
-      </a>
 
-      <a href="/produktseite.php">
-        <div class="box">
-          <img src="assets/testbild.jpg" alt="bild inventar 1">
-          <div class="inventarBilder">
-            <h3>Produkt Nr. 1</h3>
-            <h5>Gekauft am</h5>
-            <h5>17/05/20</h5>
-          </div>
-        </div>
-      </a>
+
+
+      <div class="produktbox">
+          <a href="/produkseite.php">
+            <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
+          </a>
+
+        <div class="alerttext">
+          <p> Stabmixer Super Turbo</p>
+          <h6> 5.12.12</h6>
+      </div>
     </div>
 
-  </main>
-<?php include 'footer.php';?>
+
+    <div class="produktbox">
+        <a href="/produkseite.php">
+          <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
+        </a>
+
+      <div class="alerttext">
+        <p> Stabmixer Super Turbo</p>
+        <h6> 5.12.12</h6>
+    </div>
+  </div>
+
+</main>
+<?php include "footer.php";?>

@@ -21,26 +21,33 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="de" dir="ltr">
+<html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/898fafec69.js" crossorigin="anonymous"></script>
     <title>Minimize</title>
   </head>
   <body>
 
     <!-- HEADER HEADER -->
+    <section>
     <header>
+<<<<<<< HEAD
       <a href="home-uebersicht.php">
         <img src="assets/logo.png" alt="Logo" width="200px" id="logo">
-      </a>
-    </header>
-
-    <div class="desktop-meldung">
+=======
+      <!--Pfeil anetue-->
+      <?php if ($unterscheidung) { ?>
+      <button type="button" name="button" onclick="window.history.back()" id="pfeil">
+        <i class="fas fa-arrow-left fa-1.5x"></i>
+    <?php } else { ?>
       <a href="index.php">
-        <img src="assets/logo.png" alt="Logo" width="200px" id="logo">
+        <img src="../assets/minimizelogo.png" alt="Logo" width="120px" id="logo">
+>>>>>>> be9de7fe7dcccd6bab2413f3e522d8703387e477
       </a>
-      <h2>Bitte öffne Minimize mit deinem Handy.</h2>
-    </div>
+    <?php } ?>
+    </header>

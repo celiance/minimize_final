@@ -1,42 +1,40 @@
-<?php
-  session_start();
 
-  require_once('system/config.php');
-  require_once('system/data.php');
-  include 'header.php';
+<?php include 'header.php';?>
+  <body>
+    <section class="menu">
+        <main>
+            <div class="menu">
+                <p>Hier NAme aus DB</p>
 
-  if(isset($_SESSION['userid'])){
-    $user = get_user_by_id($_SESSION['userid']);
-    $user_id = $user['id'];
-    $logged_in = true;
-    $log_in_out_text = "Logout";
-
-  }else{
-    $logged_in = false;
-    $log_in_out_text = "Anmelden";
-
-  //Umleitung zu Login, falls noch nicht eingeloggt
-  //  header("Location: https://minimize.celiance.ch/login.php");
-  }
+                <a href="">
+                  <button>
+                    <i class="fas fa-edit fa-2x"></i>
+                  </button>
+                </a>
+              </div>
 
 
-?>
+              <div class="menu">
+                <p>E-Mail</p>
 
-  <!-- MAIN MAIN -->
-  <main>
-    <div class="main-content">
+                <a href="">
+                  <button>
+                    <i class="fas fa-edit fa-2x"></i>
+                  </button>
+                </a>
+              </div>
 
-      <!--Produktanzeige-->
-      <h2><?php echo $user['name']; ?></h2>
-      <div class="">
-        <h5><?php echo $user['email']; ?></h5>
-        <h5>******</h5>
-        <h5>Passwort ändern</h5>
-      </div>
 
-      <button type="button" name="button" onclick="window.location.href='/profil.php'">Speichern</button>
-      <button type="button" name="button" onclick="window.location.href='/login.php'"><?php echo $log_in_out_text; ?></button>
-      <h5 class="delete">Profil löschen</h5>
-    </div>
-  </main>
-<?php include 'footer.php';?>
+              <div class="menu">
+                <p>Passwort</p>
+
+                <a href="">
+                  <button>
+                    <i class="fas fa-edit fa-2x"></i>
+                  </button>
+                </a>
+              </div>
+
+
+        </main>
+  <?php include "footer.php";?>
