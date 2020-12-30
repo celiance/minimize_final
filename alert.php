@@ -6,7 +6,6 @@
   $unterscheidung = true;
   $all_products = get_product_push($user_id);
 
-
 ?>
 <body class="inventar">
   <section class="inventar navbackground">
@@ -17,11 +16,12 @@
         <div class="produktbox">
           <!--Einzelnes Produkt-->
           <?php foreach ($all_products as $product) { ?>
-            <a href="/produkseite.php">
+            <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
               <!--Produktbild-->
               <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
             </a>
             <!--Angaben Produkt-->
+            <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
             <div class="alerttext">
               <p><?php echo $product['product_name']; ?></p>
               <h6>
@@ -32,14 +32,16 @@
                 ?>
               </h6>
             </div>
-            <div class"buttonalert">
-              <button class="löschenalert"type="submit" name="register_submit" value="registrieren">Nö, besser verkaufen!</button>
-              <button class="artikelbehalten"type="submit" name="register_submit" value="registrieren">Artikel behalten!</button>
+            <div class="alertbutton">
+              <i class="far fa-bell"></i>
             </div>
+            <!--
             <a href="">
               <button class="produktonlyedit">
                 <i class="fas fa-pen"></i>
               </button>
+            </a>
+            -->
             </a>
         <?php }?>
       </div>

@@ -86,7 +86,7 @@ function get_product_by_id($product_id){
 /* Produkt-Alert */
 function get_product_push($owner_id){
 	$db = get_db_connection();
-	$sql = "SELECT * FROM products WHERE owner_id = $owner_id AND purchase_date <= DATE_ADD(NOW(),INTERVAL -10 DAY) ORDER BY purchase_date;";
+	$sql = "SELECT * FROM products WHERE owner_id = $owner_id AND status <= DATE_ADD(NOW(),INTERVAL -10 DAY) ORDER BY purchase_date;";
 	$result = $db->query($sql);
 	return $result->fetchAll();
 }
@@ -95,11 +95,11 @@ function get_product_push($owner_id){
 
 /* UPDATE Status */
 
-function update_status($status){
+function update_status($status, $product_id){
 	$db = get_db_connection();
 	$sql = "UPDATE products SET status=? WHERE id=?;";
 	$stmt = $db->prepare($sql);
-	return $stmt->execute(array($status));
+	return $stmt->execute(array($status, $product_id));
 }
 
 

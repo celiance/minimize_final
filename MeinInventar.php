@@ -40,9 +40,7 @@
                           ?>
                       </h6>
                     </div>
-                    <div class="alertbutton">
-                      <span> 1 </span>
-                    </div>
+                    
                   </div>
                 </a>
               <?php }?>

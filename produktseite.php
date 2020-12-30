@@ -7,9 +7,11 @@
   if(isset($_GET['product_id'])){
     $product_id = $_GET['product_id'];
     $product = get_product_by_id($product_id);
-    $productname = $product['product_name'];
 
-
+    if(isset($_POST['behalten_submit'])){
+      $status = date('Y-m-d');
+      $result = update_status($status, $product_id);
+    }
   }else{
     echo "hier fehlt etwas";
   }
@@ -22,7 +24,7 @@
       <div class="produktonly">
         <main>
           <div class="inhaltproduktonly">
-              <h3><?php echo $product['product_name']; ?></h3>
+              <h3><?php echo $product['product_name']; ?><?php echo $product['status']; ?></h3>
               <img class="testbild" src="assets/testbild.jpg" alt="testbild" width="100">
               <p><?php echo $product['description']; ?></p>
               <p>Gekauft am:</p>
@@ -38,8 +40,21 @@
                 </button>
               </a>
           </div>
+          <div class="alertbutton">
+            <i class="far fa-bell"></i>
+          </div>
       </div>
 
+      <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+        <div class"buttonalert">
+          <button class="löschenalert"type="submit" name="verkaufen_submit" value="registrieren">Nö, besser verkaufen!</button>
+          <button class="artikelbehalten"type="submit" name="behalten_submit" value="registrieren">Artikel behalten!</button>
+        </div>
+      </form>
+
+
+
+      <!--
       <div class="quittungbox">
         <a href="">
         <p>Quittung ansehen</p>
@@ -48,6 +63,7 @@
           </button>
         </a>
       </div>
+      -->
 
     <button class="löschen"type="submit" name="register_submit" value="registrieren">Produkt löschen</button>
 
