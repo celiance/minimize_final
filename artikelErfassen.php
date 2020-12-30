@@ -6,12 +6,56 @@
   include 'header.php';
 
 
+
+
   if(isset($_POST['product_submit'])){
     $msg = "";
     $product_valid = true;
 
     if(!empty($_POST['file'])){
-      $name = $_POST['file'];
+      $name = $_POST['file']
+
+      //** WICHTIGE VARIABELN ***************************************
+      //name des uploadfelds im formular
+      $inputname = 'bildupload';
+      //pfad vom file aus ohne / am anfang
+      $upload_folder = 'uploads/files/';
+      //max dateigrösse in kb
+      $filesize = 1000;
+      //erlaubte dateiendungen als array
+      $allowed_extensions = array('png', 'jpg', 'jpeg', 'gif', 'pdf');
+      //true wenn nur bilder, sonst false
+      $images = true;
+      //** WICHTIGE VARIABELN ***************************************
+
+      $filename = pathinfo($_FILES[$inputname]['name'], PATHINFO_FILENAME);
+      $extension = strtolower(pathinfo($_FILES[$inputname]['name'], PATHINFO_EXTENSION));
+      if (!in_array($extension, $allowed_extensions)) {
+      	die("Ungültige Dateiendung.");
+      }
+      if ($_FILES[$inputname]['size'] > ($filesize * 1024)) {
+      	die("Datei zu gross.");
+      }
+      if ($images) {
+      	if (function_exists('exif_imagetype')) {
+      		$allowed_types = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF);
+      		$detected_type = exif_imagetype($_FILES[$inputname]['tmp_name']);
+      			if (!in_array($detected_type, $allowed_types)) {
+      				die("Nur der Upload von Bilddateien ist gestattet");
+      		}
+      	}
+      }
+      $new_path = $upload_folder . $filename . '.' . $extension;
+      if (file_exists($new_path)) {
+      	$id = 1;
+      	do {
+      		$new_path = $upload_folder . $filename . '_' . $id . '.' . $extension;
+      		$id++;
+      	} while (file_exists($new_path));
+      }
+      move_uploaded_file($_FILES[$inputname]['tmp_name'], $new_path);
+
+
     }else{
       $msg .= "Bitte wähle ein Foto aus.<br>";
       $product_valid = false;
@@ -65,7 +109,7 @@
     <div class="main-content">
       <h2>Artikel erfassen</h2>
       <p>Bitte mache ein Foto von deinem Produkt oder lade eins aus deinem Fotoalbum hoch.</p>
-      <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+      <form action="<?php echo $_SERVER['PHP_SELF']?>" enctype="multipart/form-data" method="post">
         <input type="file" accept="video/*;capture=camcorder" name="file" class="file"><br><br>
         <p>Fülle bitte folgende Felder aus.</p>
           <label for="product_name">Produktbezeichnung</label><br>
@@ -83,13 +127,10 @@
       <?php if(!empty($msg)){ ?>
       <div class="nachricht" role="alert">
         <p><?php echo $msg ?></p>
-=======
-  <?php
-    $unterscheidung = true;
-  ?>
-  <?php include 'header.php';?>
-  <body>
-    <section class="artikelerfassen">
+
+
+  <?php } ?>
+  </br></br>
       <main>
         <h2>Artikel erfassen</h2>
         <p>Bitte mache ein Foto von deinem Produkt oder lade eins aus deinem Fotoalbum hoch.</p>
@@ -114,7 +155,7 @@
           <?php if(!empty($msg)){ ?>
           <div class="nachricht" role="alert">
             <p><?php echo $msg ?></p>
->>>>>>> 5fbf75c8f3a5a1c7278b6a68986de64818c9a3b6
+
       </div>
       <?php } ?>
     </div>
