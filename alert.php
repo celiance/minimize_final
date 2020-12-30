@@ -9,16 +9,15 @@
 ?>
 <body class="inventar">
   <section class="inventar navbackground">
-
       <main>
         <h2>Brauchst du diese Artikel noch?</h2>
         <!--Alle Push-Produkte-->
+<?php foreach ($all_products as $product) { ?>
         <div class="produktbox">
           <!--Einzelnes Produkt-->
-          <?php foreach ($all_products as $product) { ?>
             <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
               <!--Produktbild-->
-              <img class="testbild" src="assets/testbild.jpg" alt="testbild" style="width:100%">
+              <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" style="width:100%">
             </a>
             <!--Angaben Produkt-->
             <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
@@ -43,8 +42,9 @@
             </a>
             -->
             </a>
-        <?php }?>
+
       </div>
+      <?php }?>
 
 </div>
 

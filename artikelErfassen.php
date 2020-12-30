@@ -12,48 +12,40 @@
     $msg = "";
     $product_valid = true;
 
-    if(!empty($_POST['file'])){
-      $name = $_POST['file']
+    if(isset($_FILES['bildfile'])){
+      $name = $_FILES['bildfile'];
 
-      //** WICHTIGE VARIABELN ***************************************
-      //name des uploadfelds im formular
-      $inputname = 'bildupload';
-      //pfad vom file aus ohne / am anfang
-      $upload_folder = 'uploads/files/';
-      //max dateigrösse in kb
-      $filesize = 1000;
-      //erlaubte dateiendungen als array
-      $allowed_extensions = array('png', 'jpg', 'jpeg', 'gif', 'pdf');
-      //true wenn nur bilder, sonst false
-      $images = true;
-      //** WICHTIGE VARIABELN ***************************************
 
-      $filename = pathinfo($_FILES[$inputname]['name'], PATHINFO_FILENAME);
-      $extension = strtolower(pathinfo($_FILES[$inputname]['name'], PATHINFO_EXTENSION));
-      if (!in_array($extension, $allowed_extensions)) {
-      	die("Ungültige Dateiendung.");
-      }
-      if ($_FILES[$inputname]['size'] > ($filesize * 1024)) {
-      	die("Datei zu gross.");
-      }
-      if ($images) {
-      	if (function_exists('exif_imagetype')) {
-      		$allowed_types = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF);
-      		$detected_type = exif_imagetype($_FILES[$inputname]['tmp_name']);
-      			if (!in_array($detected_type, $allowed_types)) {
-      				die("Nur der Upload von Bilddateien ist gestattet");
-      		}
-      	}
-      }
-      $new_path = $upload_folder . $filename . '.' . $extension;
-      if (file_exists($new_path)) {
-      	$id = 1;
-      	do {
-      		$new_path = $upload_folder . $filename . '_' . $id . '.' . $extension;
-      		$id++;
-      	} while (file_exists($new_path));
-      }
-      move_uploaded_file($_FILES[$inputname]['tmp_name'], $new_path);
+            //** DATEIUPLOAD DATEIUPLOAD **********************
+            //name des uploadfelds im formular
+            $inputname = 'bildfile';
+            //pfad vom file aus ohne / am anfang
+            $upload_folder = 'uploads/files/';
+            //max dateigrösse in kb
+            $filesize = 10000;
+            //erlaubte dateiendungen als array
+            $allowed_extensions = array('png', 'jpg', 'jpeg', 'gif', 'pdf');
+            //true wenn nur bilder, sonst false
+            $images = true;
+            //** WICHTIGE VARIABELN ***************************************
+
+            $filename = pathinfo($_FILES[$inputname]['name'], PATHINFO_FILENAME);
+            $extension = strtolower(pathinfo($_FILES[$inputname]['name'], PATHINFO_EXTENSION));
+            if (!in_array($extension, $allowed_extensions)) {
+            	die("Ungültige Dateiendung.");
+            }
+            if ($_FILES[$inputname]['size'] > ($filesize * 1024)) {
+            	die("Datei zu gross.");
+            }
+            if ($images) {
+            	if (function_exists('exif_imagetype')) {
+            		$allowed_types = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF);
+            		$detected_type = exif_imagetype($_FILES[$inputname]['tmp_name']);
+            			if (!in_array($detected_type, $allowed_types)) {
+            				die("Nur der Upload von Bilddateien ist gestattet");
+            		}
+            	}
+            }
 
 
     }else{
@@ -86,13 +78,24 @@
 
     if($product_valid){
 
-        $status = $purchase_date;
-        $result = product_input($img, $product_name, $purchase_date, $description, $status, $user_id);
+          $new_path = $upload_folder . $filename . '.' . $extension;
+          $dateiname = $filename . '.' . $extension;
+          if (file_exists($new_path)) {
+            $id = 1;
+            do {
+              $new_path = $upload_folder . $filename . '_' . $id . '.' . $extension;
+              $dateiname = $filename . '_' . $id . '.' . $extension;
+              $id++;
+            } while (file_exists($new_path));
+          }
+          move_uploaded_file($_FILES[$inputname]['tmp_name'], $new_path);
+
+        $result = product_input($dateiname, $product_name, $purchase_date, $description, $purchase_date, $user_id);
 
         if($result){
           unset($_POST);
           $msg = "Du hast das Produkt erfolgreich erfasst.</br>";
-          header('Location: https://minimize.celiance.ch/produktseite.php');
+          header('Location: https://minimize.celiance.ch/MeinInventar.php');
 
         }else{
           $msg .= "Etwas hat nicht geklappt. Versuche es nochmal.</br>";
@@ -110,8 +113,13 @@
       <h2>Artikel erfassen</h2>
       <p>Bitte mache ein Foto von deinem Produkt oder lade eins aus deinem Fotoalbum hoch.</p>
       <form action="<?php echo $_SERVER['PHP_SELF']?>" enctype="multipart/form-data" method="post">
-        <input type="file" accept="video/*;capture=camcorder" name="file" class="file"><br><br>
-        <p>Fülle bitte folgende Felder aus.</p>
+        <?php if(!empty($msg)){ ?>
+        <div class="nachricht" role="alert">
+          <p><?php echo $msg ?></p>
+
+
+    <?php } ?>
+        <input type="file" name="bildfile" class="file" id="file"><br><br>
           <label for="product_name">Produktbezeichnung</label><br>
           <input type="text" name="product_name" value="" class="product_name"><br>
           <label for="purchase_date">Gekauft am</label><br>
@@ -124,12 +132,8 @@
           -->
           <button type="submit" name="product_submit" value="erfassen">Erfassen</button>
       </form>
-      <?php if(!empty($msg)){ ?>
-      <div class="nachricht" role="alert">
-        <p><?php echo $msg ?></p>
 
-
-  <?php } ?>
+<!--
   </br></br>
       <main>
         <h2>Artikel erfassen</h2>
@@ -149,6 +153,7 @@
               <label for="ean">EAN-Code</label><br>
               <input type="text" name="ean" value="" class="ean"><br><br>
               -->
+              <!--
             <button type="submit" name="register_submit" value="registrieren">Erfassen</button>
           </form>
 
@@ -160,4 +165,14 @@
       <?php } ?>
     </div>
   </main>
+
+-->
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
 <?php include 'footer.php';?>

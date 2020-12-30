@@ -62,7 +62,7 @@ function get_user_by_id($id){
 
 function product_input($img, $product_name, $purchase_date, $description, $status, $owner_id){
 	$db = get_db_connection();
-	$sql = "INSERT INTO products (img, product_name, purchase_date, description, status, owner_id ) VALUES (?, ?, ?, ?, ?);";
+	$sql = "INSERT INTO products (img, product_name, purchase_date, description, status, owner_id ) VALUES (?, ?, ?, ?, ?, ?);";
 	$stmt = $db->prepare($sql);
 	return $stmt->execute(array($img, $product_name, $purchase_date, $description, $status, $owner_id));
 }
@@ -95,11 +95,12 @@ function get_product_push($owner_id){
 
 /* UPDATE Status */
 
-function update_status($status, $product_id){
+function update_status($product_id){
 	$db = get_db_connection();
-	$sql = "UPDATE products SET status=? WHERE id=?;";
+	$sql = "UPDATE products SET status=CURRENT_TIMESTAMP WHERE id=?;";
 	$stmt = $db->prepare($sql);
-	return $stmt->execute(array($status, $product_id));
+	$values = array($product_id);
+	return $stmt->execute($values);
 }
 
 
