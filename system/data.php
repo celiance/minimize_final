@@ -62,7 +62,7 @@ function get_user_by_id($id){
 
 function product_input($img, $product_name, $purchase_date, $description, $status, $owner_id){
 	$db = get_db_connection();
-	$sql = "INSERT INTO products (img, product_name, purchase_date, description, status, owner_id ) VALUES (?, ?, ?, ?, ?);";
+	$sql = "INSERT INTO products (img, product_name, purchase_date, description, status, owner_id ) VALUES (?, ?, ?, ?, ?, ?);";
 	$stmt = $db->prepare($sql);
 	return $stmt->execute(array($img, $product_name, $purchase_date, $description, $status, $owner_id));
 }
@@ -86,7 +86,7 @@ function get_product_by_id($product_id){
 /* Produkt-Alert */
 function get_product_push($owner_id){
 	$db = get_db_connection();
-	$sql = "SELECT * FROM products WHERE owner_id = $owner_id AND purchase_date <= DATE_ADD(NOW(),INTERVAL -10 DAY) ORDER BY purchase_date;";
+	$sql = "SELECT * FROM products WHERE owner_id = $owner_id AND status <= DATE_ADD(NOW(),INTERVAL -10 DAY) ORDER BY purchase_date;";
 	$result = $db->query($sql);
 	return $result->fetchAll();
 }
@@ -95,11 +95,12 @@ function get_product_push($owner_id){
 
 /* UPDATE Status */
 
-function update_status($status){
+function update_status($product_id){
 	$db = get_db_connection();
-	$sql = "UPDATE products SET status=? WHERE id=?;";
+	$sql = "UPDATE products SET status=CURRENT_TIMESTAMP WHERE id=?;";
 	$stmt = $db->prepare($sql);
-	return $stmt->execute(array($status));
+	$values = array($product_id);
+	return $stmt->execute($values);
 }
 
 

@@ -26,3 +26,17 @@
         </main>
 
 <?php include 'footer.php';?>
+
+<script>
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', function() {
+navigator.serviceWorker.register('service_worker.js')
+.then(reg => {
+console.log('Service worker registered!', reg);
+})
+.catch(err => {
+console.log('Service worker registration failed: ', err);
+});
+});
+};
+</script>

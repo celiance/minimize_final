@@ -61,7 +61,12 @@
               <section class="login">
           <main>
               <h2>Bitte logge dich ein um die Funktionen von minimize zu nutzen.</h2>
-
+              <!-- Nachricht -->
+                <?php if(!empty($msg)){ ?>
+                <div class="nachricht" role="alert">
+                  <p><?php echo $msg ?></p>
+                </div>
+                <?php } ?>
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <div>
                   <label for="email">E-Mail</label></br>
@@ -73,16 +78,8 @@
                 </div>
                 <button type="submit" name="login_submit" value="einloggen">Anmelden</button>
               </form>
-              <!-- Nachricht -->
-              <?php if(!empty($msg)){ ?>
-              <div class="nachricht" role="alert">
-                <p><?php echo $msg ?></p>
-              </div>
-              <?php } ?>
-<<<<<<< HEAD
 
-=======
->>>>>>> d902395b2284f62a043a6eaee6674002e1b56ba5
+
               <a href="register.php">
                 <p>Du bist noch nicht registriert? Hier entlang!</p>
               </a>
