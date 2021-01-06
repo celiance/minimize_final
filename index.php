@@ -1,3 +1,5 @@
+
+
 <?php
   include 'header.php';
   if(isset($_SESSION['userid'])) {
@@ -8,15 +10,21 @@
   $logged_in = false;
 ?>
 
-<header>
+<head>
+  <meta charset="utf-8">
   <link rel="manifest" href="manifest.json">
-</header>
+</head>
+
+<!-- #3/2: Install prompt -->
 <body>
+
     <section class="onepage">
         <main>
+
           <section id="installBanner" class="banner">
- <button id="installBtn">Install app</button>
-</section>
+            <button id="installBtn">Install app</button>
+            </section>
+
             <h2> Rundgang starten. </h2>
              <p>Nutzte minimize und behalte den Überblick über dein Zuhause.</p>
 
@@ -32,15 +40,18 @@
 <?php include 'footer.php';?>
 
 <script>
-if ('serviceWorker' in navigator) {
-window.addEventListener('load', function() {
-navigator.serviceWorker.register('service_worker.js')
-.then(reg => {
-console.log('Service worker registered!', reg);
-})
-.catch(err => {
-console.log('Service worker registration failed: ', err);
-});
-});
-};
+// This is the "Offline page" service worker
+
+// Add this below content to your HTML page inside a <script type="module"></script> tag, or add the js file to your page at the very top to register service worker
+// If you get an error about not being able to import, double check that you have type="module" on your <script /> tag
+
+/*
+ This code uses the pwa-update web component https://github.com/pwa-builder/pwa-update to register your service worker,
+ tell the user when there is an update available and let the user know when your PWA is ready to use offline.
+*/
+
+import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+const el = document.createElement('pwa-update');
+document.body.appendChild(el);
 </script>

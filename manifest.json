@@ -14,6 +14,6 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/index.php",
+  "start_url": "https://minimize.celiance.ch/",
   "display": "fullscreen",
 }
