@@ -21,8 +21,9 @@
     <section class="menu">
         <main>
               <div class="menu">
-                <p><?php echo $user['name']; ?></p>
-                  <a href="">
+                <a href="updateProfil.php?user_id=<?php echo $user_id; ?>">
+                  <p><?php echo $user['name']; ?></p>
+                </a>
                     <button type="button" name="button">
                       <i class="fas fa-arrow-circle-right fa-2x"></i>
                     </button>
@@ -30,8 +31,9 @@
                 </div>
 
               <div class="menu">
-                <p><?php echo $user['email']; ?></p>
-                <a href="">
+                <a href="updateProfil.php?user_id=<?php echo $user_id; ?>">
+                  <p><?php echo $user['email']; ?></p>
+                </a>
                   <button type="button" name="button">
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
@@ -39,9 +41,10 @@
               </div>
 
               <div class="menu">
-                <p>Passwort *****</p>
-                <a href="">
-                  <button type="button" name="button">
+                <a href="updateProfil.php?user_id=<?php echo $user_id; ?>">
+                  <p>Passwort *****</p>
+                </a>
+                  <button type="button" name="button" >
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
