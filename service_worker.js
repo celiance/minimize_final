@@ -3,7 +3,13 @@ self.skipWaiting();
 const cacheName = 'cache-v1.1';
 // Hier mit absoluten (/) und relativen Pfaden gearbeitet
 const precacheResources = [
- 'assets\arrow_black.png'
+ '/login.php',
+'/css/style.css',
+'	/css/normalize.css',
+'	/assets/minimizelogo.png',
+
+
+
 ];
 
 self.addEventListener('install', event => {
