@@ -20,7 +20,7 @@
 
     /*p*/
 
-    --grösse2: 1.1em;
+    --grösse2: 1em;
     --grösse3: 1.3em;
     --zeilenabstand: 30px;
 }
@@ -62,9 +62,10 @@ header{
 
 h2{
   letter-spacing: 0.05em;
-  line-height: 40px;
-
-
+  line-height: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  padding-left: 1rem;
 
 }
 
@@ -74,6 +75,8 @@ p{
   font-size: var(--grösse2);
   line-height: var(--zeilenabstand);
   color: black;
+  margin-bottom: 0;
+
 
 }
 
@@ -128,7 +131,7 @@ section.register button{
   width: 80vw;
   padding: 10px;
   border-radius: 25px;
-  margin-top: 45px;
+  margin-top: 100px;
   font-weight: 100;
   font-size: var(--grösse2);
   letter-spacing: 0.06em;
@@ -229,7 +232,7 @@ section.home{
 }
 
 section.home main{
-    width: 80vw;
+    width: 90vw;
     min-height: 80vh;
     padding-bottom: 4rem;
     display: flex;
@@ -423,9 +426,10 @@ section.login button{
   width: 80vw;
   padding: 10px;
   border-radius: 25px;
-  margin-top: 45px;
-  letter-spacing: var(--zeichenabstand2);
+  margin-top: 100px;
+  font-weight: 100;
   font-size: var(--grösse2);
+  letter-spacing: 0.06em;
 }
 
 section.login h6 {
@@ -609,7 +613,7 @@ body.produktseite{
   flex-direction: column;
   justify-content: flex-end;
   color: var(--black);
-  margin-bottom: 10%;;
+  margin-top: 30px;
   border-radius: 25px;
   background: whitesmoke;
   box-shadow:  2px -4px 10px #b7b7b7, -3px 3px 12px #ffffff;
@@ -752,6 +756,10 @@ section.profile{
 
 }
 
+section.profile h2{
+  padding-left: 0;
+}
+
 section.profile main{
     width: 80vw;
     min-height: 80vh;
@@ -799,7 +807,7 @@ input{
   box-shadow: 1px 1px 10px lightgrey;
   height: 25px;
   width: 80vw;
-  margin-bottom: 50px;
+  margin-top: 50px;
 
 }
 
@@ -849,6 +857,3 @@ label{
   align-content: center; display: none;
   justify-content: center; width: 100%;
  }
-
-
- 

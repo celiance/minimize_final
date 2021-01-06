@@ -42,7 +42,7 @@
 
               <div class="menu">
                 <a href="updateProfil.php?user_id=<?php echo $user_id; ?>">
-                  <p>Passwort *****</p>
+                  <p>Passwort</p>
                 </a>
                   <button type="button" name="button" >
                     <i class="fas fa-arrow-circle-right fa-2x"></i>
@@ -67,6 +67,8 @@
                   </button>
               </form>
               </div>
+
+
 
 
 
