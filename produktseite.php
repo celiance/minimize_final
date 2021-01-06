@@ -20,17 +20,21 @@
     header('Location: /produktseite.php?product_id=' . $_POST['product_id']);
   }
 
-
+  if(isset($_POST['delete_product'])){
+        $result = delete_product($product_id);
+        if($result){
+          $product_deleted = true;
+          $msg .= "Sie haben ihr Produkt erfolgreich gelöscht.</br>";
+          header("Location: MeinInventar.php");
+        }else{
+          $msg .= "ERROR";
+        }
+    }
 
 ?>
   <!-- MAIN MAIN -->
   <body class="produktseite">
-    <?php
-     if($status){
-        echo "yessss";
-      }else{
-        echo "kein Inhalt im Status!!!!!";
-      } ?>
+
       <!--Produktanzeige-->
       <div class="produktonly">
         <main>
@@ -38,8 +42,8 @@
               <h3><?php echo $product['product_name']; ?></h3>
               <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" width="100">
               <p><?php echo $product['description']; ?></p>
-              <p>Gekauft am:</p>
-              <p>
+              <p>Preis: <?php echo $product['price']; ?> CHF</p>
+              <p>Gekauft am:
                 <?php
                   $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
                   echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
@@ -51,12 +55,29 @@
                 </button>
               </a>
           </div>
-          <div class="alertbutton">
-            <i class="far fa-bell"></i>
-          </div>
-      </div>
 
-      <!--Buttons werden nur angezeigt, wenn der Push aktiv ist-->
+          <!--QUITTUNG QUITTUNG QUITTUNG-->
+          <div class="quittungbox">
+            <a href="<?php $product['quittung']; ?>">
+            <p>Quittung ansehen</p>
+              <button>
+                <i class="fas fa-arrow-circle-right fa-2x"></i>
+              </button>
+            </a>
+          </div>
+
+          <!--glöckli wird nur angezeigt, wenn der push aktiv ist-->
+          <?php
+          foreach ($push_products as $push_prod) {
+            $push_prod_id = $push_prod['id'];
+                  if($push_prod_id == $product_id){?>
+                    <div class="alertbutton">
+                      <i class="far fa-bell"></i>
+                    </div>
+                </div>
+          <?php }}?>
+
+      <!--buttons werden nur angezeigt, wenn der push aktiv ist-->
       <?php
       foreach ($push_products as $push_prod) {
         $push_prod_id = $push_prod['id'];
@@ -70,18 +91,17 @@
                 </form>
       <?php }}?>
 
-      <!--
-      <div class="quittungbox">
-        <a href="">
-        <p>Quittung ansehen</p>
-          <button>
-            <i class="fas fa-arrow-circle-right fa-2x"></i>
-          </button>
-        </a>
-      </div>
-      -->
-
-      <button class="löschen"type="submit" name="register_submit" value="registrieren">Produkt löschen</button>
+      <!--Produkt löschen btn-->
+      <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+        <button class="löschen" type="submit" name="delete_product" value="delete-product">Produkt löschen</button>
+      </form>
 
     </main>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 <?php include 'footer.php';?>

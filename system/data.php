@@ -62,9 +62,9 @@ function get_user_by_id($id){
 
 function product_input($img, $product_name, $purchase_date, $price, $description, $quittung, $status, $owner_id){
 	$db = get_db_connection();
-	$sql = "INSERT INTO products (img, product_name, purchase_date, price, description, quittung, status, owner_id ) VALUES (?, ?, ?, ?, ?, ?);";
+	$sql = "INSERT INTO products (img, product_name, purchase_date, price, description, quittung, status, owner_id ) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
 	$stmt = $db->prepare($sql);
-	return $stmt->execute(array($img, $product_name, $purchase_date, $description, $status, $owner_id));
+	return $stmt->execute(array($img, $product_name, $purchase_date, $price, $description, $quittung, $status, $owner_id));
 }
 
 
@@ -111,6 +111,13 @@ function delete_profil($id){
 	$sql = "DELETE FROM user WHERE id=?;";
 	$stmt = $db->prepare($sql);
 	return $stmt->execute(array($id));
+}
+
+function delete_product($product_id){
+	$db = get_db_connection();
+	$sql = "DELETE FROM products WHERE id=?;";
+	$stmt = $db->prepare($sql);
+	return $stmt->execute(array($product_id));
 }
 
 
