@@ -3,10 +3,10 @@ self.skipWaiting();
 const cacheName = 'cache-v1.1';
 // Hier mit absoluten (/) und relativen Pfaden gearbeitet
 const precacheResources = [
- '/login.php',
+ '/index.php',
 '/css/style.css',
 '	/css/normalize.css',
-'	/assets/minimizelogo.png',
+'/rundgang_1.php'
 
 
 
