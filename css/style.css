@@ -45,8 +45,8 @@ body{
     min-height: -webkit-fill-available;
     padding: 1rem;
     box-sizing: border-box;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(217,217,217,1) 100%);
+    background: white;
+
 
 }
 
@@ -70,9 +70,10 @@ h2{
 
 p{
   letter-spacing: 0.05em;
-  font-weight: 300;
+  font-weight: 100;
   font-size: var(--grösse2);
   line-height: var(--zeilenabstand);
+  color: black;
 
 }
 
@@ -85,7 +86,10 @@ h3 {
 
 
 /*registrieren*/
-
+input::placeholder{
+  font-weight: 100;
+  padding-left: 10px;
+}
 
 section.register{
     display: flex;
@@ -108,7 +112,7 @@ section.register main{
 
 section.register h6 {
     letter-spacing: 0.05em;
-    font-weight: 300;
+    font-weight: 100;
     font-size: var(--grösse2);
     line-height: var(--zeilenabstand);
     margin-bottom: 0;
@@ -125,8 +129,9 @@ section.register button{
   padding: 10px;
   border-radius: 25px;
   margin-top: 45px;
-  letter-spacing: var(--zeichenabstand2);
+  font-weight: 100;
   font-size: var(--grösse2);
+  letter-spacing: 0.06em;
 }
 
 
@@ -201,7 +206,7 @@ section.onepage p{
 
 h6{
   letter-spacing: 0.05em;
-  font-weight: 300;
+  font-weight: 100;
   font-size: var(--grösse2);
   line-height: var(--zeilenabstand);
   margin-top: 0;
@@ -425,7 +430,7 @@ section.login button{
 
 section.login h6 {
     letter-spacing: 0.05em;
-    font-weight: 300;
+    font-weight: 100;
     font-size: var(--grösse2);
     line-height: var(--zeilenabstand);
     margin-bottom: 0;
@@ -699,7 +704,7 @@ body.produkt {
   margin-left: 10px;
   margin-right: 10px;
   letter-spacing: 0.07em;
-  font-weight: 300;
+  font-weight: 100;
   font-size: var(--grösse2);
 }
 
@@ -714,7 +719,7 @@ body.produkt {
   margin-right: 10px;
   margin-top: 1rem;
   letter-spacing: 0.07em;
-  font-weight: 300;
+  font-weight: 100;
   font-size: var(--grösse2);
 }
 
@@ -804,7 +809,7 @@ input{
 label{
   margin: 50px 0px;
   letter-spacing: 0.05em;
-  font-weight: 300;
+  font-weight: 100;
   font-size: var(--grösse2);
 
 }
@@ -844,3 +849,6 @@ label{
   align-content: center; display: none;
   justify-content: center; width: 100%;
  }
+
+
+ 
