@@ -48,12 +48,12 @@
               </div>
 
               <div class="menu">
-                <p>Ausloggen</p>
-                <a href="">
-                  <button type="button" name="button" onclick="window.location.href='/index.php'">
-                    <i class="fas fa-arrow-circle-right fa-2x"></i>
-                  </button>
+                <a href="login.php">
+                  <p>Ausloggen</p>
                 </a>
+                <button type="button" name="button" onclick="window.location.href='/login.php'">
+                  <i class="fas fa-arrow-circle-right fa-2x"></i>
+                </button>
               </div>
 
               <div class="menu">

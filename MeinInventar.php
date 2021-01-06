@@ -6,6 +6,7 @@
   $all_products = get_product($user_id);
 
 
+
 ?>
 
 
@@ -15,14 +16,14 @@
         <main>
             <h2>Mein Inventar</h2>
             <div class="container">
-            <!--Suchfeld-->
-	             <div class="searchbox">
-		               <input type="text"placeholder="Suche">
-		                 <span></span>
-	             </div>
             </div>
             <!--Alle Produkte-->
             <div class="container">
+              <!--leere proudktliste-->
+            <?php  if(empty($all_products)){ ?>
+                <p>Noch keine Produkte erfasst?</p>
+                <button type="button" name="button" onclick="window.location.href='/artikelErfassen.php'">Erstes Produkt erfassen</button>
+            <?php }?>
               <!--Einzelnes Produkt-->
               <?php foreach ($all_products as $product) { ?>
                 <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
