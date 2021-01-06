@@ -6,6 +6,7 @@
   $all_products = get_product($user_id);
 
 
+
 ?>
 
 
@@ -18,6 +19,11 @@
             </div>
             <!--Alle Produkte-->
             <div class="container">
+              <!--leere proudktliste-->
+            <?php  if(empty($all_products)){ ?>
+                <p>Noch keine Produkte erfasst?</p>
+                <button type="button" name="button">Erstes Produkt erfassen</button>
+            <?php }?>
               <!--Einzelnes Produkt-->
               <?php foreach ($all_products as $product) { ?>
                 <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
