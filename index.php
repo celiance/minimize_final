@@ -29,7 +29,7 @@
 
 
             <button class="loginbutton" type="button" name="button" onclick="window.location.href='/login.php'">
-              <p>Login</p>
+              <h3>Login</h3>
             </button>
         </main>
 

@@ -78,15 +78,23 @@ header{
 }
 
 
+@media only screen and (max-height: 699px) {
+  h2 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+}
 
 
+@media only screen and (min-height: 700px) {
 h2{
   font-weight: 700;
   line-height: 2.5rem;
   font-size: 2.5rem;
   margin-bottom: 0;
-
 }
+}
+
 
 p{
   letter-spacing: 0.05em;
@@ -147,19 +155,45 @@ section.register h2{
   padding-left: 0;
 }
 
+@media only screen and (min-height: 700px) {
 
-section.register button{
-  border: 1px solid black;
-  background-color: black;
-  color: white;
-  width: 80vw;
-  padding: 10px;
-  border-radius: 25px;
-  margin-top: 70px;
-  font-weight: 100;
-  font-size: 1rem;
-  letter-spacing: 0.06em;
+  section.register button{
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    width: 80vw;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 70px;
+    font-weight: 100;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+  }
+
 }
+
+@media only screen and (max-height: 699px) {
+
+  section.register button{
+    margin-top: 50px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    width: 80vw;
+    padding: 10px;
+    border-radius: 25px;
+    font-weight: 100;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+
+  }
+
+  h6{
+    margin:0;
+  }
+
+}
+
 
 
 section.register h3{
@@ -248,14 +282,11 @@ section.onepage p{
   font-size: 1rem;
 }
 
-h6{
-  letter-spacing: 0.05em;
-  font-weight: 300;
-  font-size: var(--grösse2);
-  line-height: var(--zeilenabstand);
-  margin-top: 0;
-  margin-bottom: 0;
+h3{
+  margin: 0;
+  padding: 0;
 }
+
 
 
 /*Home Onepage*/
@@ -549,7 +580,8 @@ section.info main{
 
 
 #pfeil {
-  padding-top: 5%;
+  padding-top: 20px;
+  padding-left: 20px;
   border: none;
   background-color: transparent;
 }
@@ -881,17 +913,36 @@ section.profile main{
   color: var(--rot);
 }
 
+
+@media only screen and (min-height: 700px) {
+
 input{
   border-bottom: 1px solid black;
   border-top: none;
   border-left: none;
   border-right: none;
-  height: 40px;
+  height: 30px;
+  width: 80vw;
+  margin-top: 20px;
+
+}
+}
+
+@media only screen and (max-height: 699px) {
+
+input{
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 30px;
   width: 80vw;
   margin-top: 30px;
 
-
 }
+}
+
+
 
 
 
