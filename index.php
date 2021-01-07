@@ -27,6 +27,7 @@
                  <i class="fas fa-arrow-right fa-2x"></i>
               </button>
 
+
             <button class="loginbutton" type="button" name="button" onclick="window.location.href='/login.php'">
               <p>Login</p>
             </button>
@@ -39,6 +40,8 @@
 <?php include 'footer.php';?>
 
 <script type="text/javascript">
+
+
 if ('serviceWorker' in navigator) {
 window.addEventListener('load', function() {
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -50,4 +53,6 @@ window.addEventListener('load', function() {
   });
 });
 }
+
+
 </script>

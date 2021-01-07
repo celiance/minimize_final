@@ -182,15 +182,7 @@
 <!-- MAIN MAIN -->
  <main>
    <div class="main-content">
-     <!--Barcode-->
-     <p>Gib den EAN-Code deines Produktes hier ein:</p>
-     <input type="text" id="text-input">
-     <button type="submit" id="submit_barcode">Barcode eingeben</button>
-     <br/>
-     <br/>
-     <strong>Kategorie: </strong> <div id="Kategorie"></div><br/>
-     <strong>Produktname: </strong> <div id="ProductName"></div><br/>
-     <div id="Images">
+
 
      <!--Manuell Erfassen-->
      <p>Bitte mache ein Foto von deinem Produkt oder lade eins aus deinem Fotoalbum hoch.</p>
@@ -202,6 +194,17 @@
        <?php } ?>
 
        <input type="file" name="bildfile" class="file" id="file"><br><br>
+
+       <!--Barcode-->
+       <p>Alternativ kannst du hier den Barcode eingeben:</p>
+       <input type="text" id="text-input">
+       <button type="submit" id="submit_barcode">Barcode eingeben</button>
+       <br/>
+       <br/>
+       <strong>Kategorie: </strong> <div id="Kategorie"></div><br/>
+       <strong>Produktname: </strong> <div id="ProductName"></div><br/>
+       <div id="Images">
+
          <label for="product_name">Produktbezeichnung</label><br>
          <input type="text" name="product_name" value="" class="product_name"><br>
          <label for="purchase_date">Gekauft am</label><br>
@@ -236,10 +239,11 @@
    <?php include 'footer.php';?>
 
    <script type="text/javascript">
+
    //API abfrage
    function getAPIdata(barcode) {
        const proxyurl = "https://cors-anywhere.herokuapp.com/"; // Use a proxy to avoid CORS error
-       const api_key = "fmpj23pu8g0u19edw824cp26ckxcim";
+       const api_key = "qp9rkiydw0cqfzvhs9ukm65rji68u0";
        const url = proxyurl + "https://api.barcodelookup.com/v2/products?barcode=" + barcode + "&formatted=y&key=" + api_key;
        fetch(url)
                .then(response => response.json())

@@ -2,8 +2,21 @@ var CACHE_NAME = 'example';
 var urlsToCache = [
   '/index.php',
  '/css/style.css',
- '	/css/normalize.css',
- '/rundgang_1.php'
+ '/css/normalize.css',
+ '/rundgang_1.php',
+ '/rundgang_2.php',
+ '/about.php',
+ '/alert.php',
+ '/artikelErfassen.php',
+ '/footer.php',
+ '/footerloggout.php',
+ '/header.php',
+ '/headerarrow.php',
+ '/help.php',
+ '/home-uebersicht.php',
+ '/impressum.php',
+ '/login-wall.php',
+ 'login.php',
 ];
 
 self.addEventListener('install', function(event) {

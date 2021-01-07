@@ -43,7 +43,6 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <script type="text/javascript" src="pwabuilder-sw-register.js"></script>
     <title>Minimize</title>
   </head>
   <body>
