@@ -217,11 +217,11 @@ section.onepage{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 80vh;
-    width: 80vw;
+    height: 85vh;
+    width: 90vw;
     box-sizing: border-box;
     position: fixed;
-
+    padding-left: 1rem;
 }
 
 
@@ -369,8 +369,6 @@ section.menu main{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
-
 }
 
 section.menu h2{

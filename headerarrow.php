@@ -41,11 +41,6 @@
       </a>
     </header>
 
-    <div class="desktop-meldung">
-      <a href="index.php">
-        <img src="assets/logominimize.png" alt="Logo" width= 200px" id="logo">
-      </a>
-      <h2>Bitte öffne Minimize mit deinem Handy.</h2>
-    </div>
+
 
   </body>
