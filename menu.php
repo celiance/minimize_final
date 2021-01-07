@@ -16,7 +16,7 @@
               <div class="menu">
                 <p>Hilfe</p>
                   <button type="button" name="button" onclick="window.location.href='/help.php'">
-                    <i class="fas fa-arrow-right "></i>
+                    <i class="fas fa-arrow-right"></i>
                   </button>
                 </a>
               </div>

@@ -24,11 +24,11 @@
              <p>Nutzte minimize und behalte den Überblick über dein Zuhause.</p>
 
              <button type="button" name="button" onclick="window.location.href='/rundgang_1.php'">
-                 <i class="fas fa-arrow-circle-right fa-3x"></i>
+                 <i class="fas fa-arrow-right fa-2x"></i>
               </button>
 
             <button class="loginbutton" type="button" name="button" onclick="window.location.href='/login.php'">
-              <h6>Login</h6>
+              <p>Login</p>
             </button>
         </main>
 
