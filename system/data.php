@@ -103,6 +103,22 @@ function update_status($product_id){
 	return $stmt->execute($values);
 }
 
+function update_name($id, $name){
+	$db = get_db_connection();
+	$sql = "UPDATE user SET name='$name' WHERE id=?;";
+	$stmt = $db->prepare($sql);
+	$values = array($user_id, $name);
+	return $stmt->execute($values);
+}
+
+function update_profil($user_id, $password){
+	$db = get_db_connection();
+	$sql = "UPDATE user SET password=$password WHERE id=$user_id;";
+	$stmt = $db->prepare($sql);
+	$values = array($id, $password);
+	return $stmt->execute($values);
+}
+
 
 /* DELETE BEFEHLE */
 
@@ -113,11 +129,11 @@ function delete_profil($id){
 	return $stmt->execute(array($id));
 }
 
-function delete_product($product_id){
+function delete_product($id){
 	$db = get_db_connection();
 	$sql = "DELETE FROM products WHERE id=?;";
 	$stmt = $db->prepare($sql);
-	return $stmt->execute(array($product_id));
+	return $stmt->execute(array($id));
 }
 
 
