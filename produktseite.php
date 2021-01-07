@@ -10,7 +10,7 @@
   if(isset($_GET['product_id'])){
     $product_id = $_GET['product_id'];
     $product = get_product_by_id($product_id);
-
+    $product_id = $product['id'];
   }else{
     echo "hier fehlt etwas";
   }
@@ -21,8 +21,8 @@
   }
 
   if(isset($_POST['delete_product'])){
-        $del_prod = delete_product($product_id);
-        if($del_prod){
+        $result = delete_product($product_id);
+        if($result){
           $product_deleted = true;
           $msg .= "Sie haben ihr Produkt erfolgreich gelöscht.</br>";
           header("Location: MeinInventar.php");
@@ -34,6 +34,7 @@
 ?>
   <!-- MAIN MAIN -->
   <body class="produktseite">
+
       <!--Produktanzeige-->
       <div class="produktonly">
         <main>
@@ -92,7 +93,7 @@
 
       <!--Produkt löschen btn-->
       <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-        <button class="löschen" type="submit" name="delete_product">Produkt löschen</button>
+        <button class="löschen" type="submit" name="delete_product" value="delete-product">Produkt löschen</button>
       </form>
 
     </main>

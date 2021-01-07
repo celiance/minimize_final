@@ -24,9 +24,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel='stylesheet' media='screen and (max-width: 701px' href='css/style.css'>
-    <link rel='stylesheet' media='screen and (min-width: 702px' href='css/desktopAlert.css'>
-
     <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/898fafec69.js" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">

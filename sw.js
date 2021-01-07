@@ -1,6 +1,9 @@
 var CACHE_NAME = 'example';
 var urlsToCache = [
-  '/'
+  '/index.php',
+ '/css/style.css',
+ '	/css/normalize.css',
+ '/rundgang_1.php'
 ];
 
 self.addEventListener('install', function(event) {

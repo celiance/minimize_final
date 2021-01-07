@@ -8,7 +8,7 @@
     <section class="home">
         <main>
             <h2>Hallo <?php echo $user['name']; ?>!</h2>
-            <p> Was möchtest du tun?</p>
+            <h3> Was möchtest du tun?</h3>
               <div class="box">
                 <p>Mein Inventar ansehen</p>
 
