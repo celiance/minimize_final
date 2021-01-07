@@ -229,6 +229,10 @@
      </div>
    </div>
 
+   <?php
+     $unterscheidungfooter = true;
+   ?>
+
    <?php include 'footer.php';?>
 
    <script type="text/javascript">

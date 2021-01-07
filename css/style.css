@@ -1,6 +1,13 @@
 /*IMPORT----------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;500&family=Work+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+
+
+
+
+
 
 
 
@@ -20,9 +27,9 @@
 
     /*p*/
 
-    --grösse2: 1em;
+    --grösse2: 1.2em;
     --grösse3: 1.3em;
-    --zeilenabstand: 30px;
+    --zeilenabstand: 25px;
 }
 
 
@@ -36,46 +43,55 @@ body{
     -ms-hyphens: auto;
 
     color: black;
-    margin: 0;
-    padding: 0;
     width: 100vw;
     height: 100vh;
-    font-family: "Heebo", sans-serif;
+    font-family: 'DM Sans', sans-serif;
 
     min-height: -webkit-fill-available;
-    padding: 1rem;
+
     box-sizing: border-box;
     background: white;
+    hyphens: none;
+
+
+
 
 
 }
 
+
+
+
+
+
+
 header{
-  width: 80vw;
-  padding-left: 6vw;
+  width: 100%;
   height: 10%;
-  position: sticky;
+  padding-left: 1rem;
+  position: fixed;
+  background-color: grey;
 }
 
 
 
 
 h2{
-  letter-spacing: 0.05em;
-  line-height: 2rem;
-  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
   margin-bottom: 0;
-  padding-left: 1rem;
 
 }
 
 p{
   letter-spacing: 0.05em;
-  font-weight: 100;
   font-size: var(--grösse2);
   line-height: var(--zeilenabstand);
   color: black;
   margin-bottom: 0;
+  margin-top: 20px;
+
 
 
 }
@@ -91,7 +107,6 @@ h3 {
 /*registrieren*/
 input::placeholder{
   font-weight: 100;
-  padding-left: 10px;
 }
 
 section.register{
@@ -104,7 +119,7 @@ section.register{
 
 section.register main{
     width: 80vw;
-    min-height: 80vh;
+    min-height: 85vh;
     padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
@@ -116,12 +131,17 @@ section.register main{
 section.register h6 {
     letter-spacing: 0.05em;
     font-weight: 100;
-    font-size: var(--grösse2);
+    font-size: 1rem;
     line-height: var(--zeilenabstand);
-    margin-bottom: 0;
     margin-top: 2em;
     color: black;
+    text-align: center;
   }
+
+
+section.register h2{
+  padding-left: 0;
+}
 
 
 section.register button{
@@ -131,10 +151,23 @@ section.register button{
   width: 80vw;
   padding: 10px;
   border-radius: 25px;
-  margin-top: 100px;
+  margin-top: 70px;
   font-weight: 100;
-  font-size: var(--grösse2);
+  font-size: 1rem;
   letter-spacing: 0.06em;
+}
+
+
+section.register h3{
+  color: grey;
+  text-align: center;
+  padding-top: 50px;
+  margin: 0;
+}
+
+
+section.register p{
+  font-size: 1rem;
 }
 
 
@@ -145,7 +178,7 @@ section.newitem main{
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 70vh;
+  height: 85vh;
   margin-top: 100px;
   box-sizing: border-box;
 }
@@ -201,10 +234,14 @@ section.onepage button{
 
 section.onepage h2{
   margin-left: 20px;
+  padding-left: 0;
+  line-height: 3rem;
 }
 
 section.onepage p{
   margin-left: 20px;
+  margin-top: 20px;
+  font-size: 1rem;
 }
 
 h6{
@@ -219,39 +256,28 @@ h6{
 
 /*Home Onepage*/
 
+
 body.home {
   background-color: whitesmoke;
 }
-section.home{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
 
-
-}
 
 section.home main{
-    width: 90vw;
-    min-height: 80vh;
-    padding-bottom: 4rem;
+    width: 80vw;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-left: 2rem;
 
 }
 
 section.home button {
-  padding-left: 1rem;
   padding-bottom: 1rem;
+  padding-top: 1rem;
   border: none;
   background-color: transparent;
-}
 
-
-
-section.home p {
-  padding-left: 1rem;
 }
 
 
@@ -267,6 +293,17 @@ section.inventar main{
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
 body.inventar{
   background: whitesmoke;
   min-height: -webkit-fill-available;
@@ -274,9 +311,6 @@ body.inventar{
 
 
 
-.navbackground nav{
-  background: whitesmoke;
-}
 
 section.inventar h2{
   padding-left: 1rem;
@@ -328,24 +362,15 @@ section.artikelerfassen{
 /*onepage Menu*/
 
 
-section.menu{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 80vh;
-    min-height: -webkit-fill-available;
-}
-
-
 
 section.menu main{
-    height: 80vh;
-    width: 100%;
+    width: 80vw;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 5vh;
+
+
 }
 
 section.menu h2{
@@ -354,7 +379,8 @@ section.menu h2{
 
 
 section.menu button{
-  padding-left: 2rem;
+  padding-left: 3rem;
+  padding-top: 1rem;
   border: none;
   background-color: white;
 }
@@ -366,7 +392,7 @@ section.menu button{
 /*Scrollpage Alert*/
 body.alert{
   background: whitesmoke;
-  min-height: -webkit-fill-available;
+  c
 }
 
 section.alert{
@@ -405,7 +431,7 @@ section.login{
 
 section.login main{
     width: 80vw;
-    min-height: 80vh;
+    min-height: 85vh;
     padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
@@ -426,26 +452,67 @@ section.login button{
   width: 80vw;
   padding: 10px;
   border-radius: 25px;
-  margin-top: 100px;
+  margin-top: 70px;
   font-weight: 100;
-  font-size: var(--grösse2);
+  font-size: 1rem;
   letter-spacing: 0.06em;
 }
 
 section.login h6 {
     letter-spacing: 0.05em;
     font-weight: 100;
-    font-size: var(--grösse2);
+    font-size: 1rem;
     line-height: var(--zeilenabstand);
     margin-bottom: 0;
     margin-top: 2em;
     color: black;
   }
 
+  section.login h3{
+    color: grey;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  section.login p {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1rem;
+
+
+  }
 
 
 
 
+
+/*Infoseiten*/
+
+section.info p{
+  font-size: 1rem;
+}
+
+section.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+
+
+section.info main{
+    width: 80vw;
+    min-height: 80vh;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
 
 
 
@@ -488,12 +555,6 @@ section.login h6 {
 }
 
 
-#logo{
-  padding-top: 5%;
-
-
-}
-
 #pfeil {
   padding-top: 5%;
   border: none;
@@ -511,7 +572,6 @@ nav{
   padding-left: 1rem;
   padding-right: 1rem;
   box-sizing: border-box;
-  background: none;
   font-size: 2.5rem;
   width: 100vw;
   align-items: center;
@@ -606,7 +666,7 @@ body.produktseite{
     font-size: var(--grösse2);
   }
 
-.box{
+/*.box{
   background: white;
   height: auto;
   display: flex;
@@ -618,7 +678,37 @@ body.produktseite{
   background: whitesmoke;
   box-shadow:  2px -4px 10px #b7b7b7, -3px 3px 12px #ffffff;
 
+} */
+
+
+.box{
+  background: white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--black);
+  margin-top: 30px;
+  border-bottom: solid 1px black;
+  background-color: whitesmoke;
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .quittungbox{
   background: white;
@@ -735,12 +825,14 @@ body.produkt {
   max-width: 90vw;
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-columns: 70% auto;
+  grid-template-columns: 80% auto;
   color: var(--black);
   align-items: center;
-  padding-bottom: 1rem;
-  padding-left: 0.5rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
   padding-right: 0.5rem;
+
+
 
 }
 
@@ -762,7 +854,7 @@ section.profile h2{
 
 section.profile main{
     width: 80vw;
-    min-height: 80vh;
+    min-height: 85vh;
     padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
@@ -801,13 +893,14 @@ section.profile main{
 }
 
 input{
-  background: white;
-  border: 1px solid black;
-  border-radius: 25px;
-  box-shadow: 1px 1px 10px lightgrey;
-  height: 25px;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 40px;
   width: 80vw;
-  margin-top: 50px;
+  margin-top: 30px;
+
 
 }
 
