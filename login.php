@@ -60,7 +60,7 @@
             <body>
               <section class="login">
           <main>
-              <h2>Bitte logge dich ein um die Funktionen von minimize zu nutzen.</h2>
+              <h2>Login</h2>
               <!-- Nachricht -->
                 <?php if(!empty($msg)){ ?>
                 <div class="nachricht" role="alert">
@@ -81,7 +81,10 @@
 
 
               <a href="register.php">
-                <p>Du bist noch nicht registriert? Hier entlang!</p>
+                <p>Registrieren</p>
+              </a>
+              <a href="">
+              <h3>Passwort vergessen?</h3>
               </a>
             </section>
           </main>

@@ -24,7 +24,7 @@
                 <p><?php echo $user['name']; ?></p>
                   <a href="">
                     <button type="button" name="button">
-                      <i class="fas fa-arrow-circle-right fa-2x"></i>
+                      <i class="fas fa-arrow-right "></i>
                     </button>
                   </a>
                 </div>
@@ -33,16 +33,17 @@
                 <p><?php echo $user['email']; ?></p>
                 <a href="">
                   <button type="button" name="button">
-                    <i class="fas fa-arrow-circle-right fa-2x"></i>
+                    <i class="fas fa-arrow-right "></i>
                   </button>
                 </a>
               </div>
 
               <div class="menu">
-                <p>Passwort *****</p>
-                <a href="">
-                  <button type="button" name="button">
-                    <i class="fas fa-arrow-circle-right fa-2x"></i>
+                <a href="updateProfil.php?user_id=<?php echo $user_id; ?>">
+                  <p>Passwort</p>
+                </a>
+                  <button type="button" name="button" >
+                    <i class="fas fa-arrow-right "></i>
                   </button>
                 </a>
               </div>
@@ -52,7 +53,7 @@
                   <p>Ausloggen</p>
                 </a>
                 <button type="button" name="button" onclick="window.location.href='/login.php'">
-                  <i class="fas fa-arrow-circle-right fa-2x"></i>
+                  <i class="fas fa-arrow-right "></i>
                 </button>
               </div>
 
@@ -60,7 +61,7 @@
                 <p>Profil löschen</p>
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                   <button type="submit" name="delete-profil">
-                    <i class="fas fa-arrow-circle-right fa-2x"></i>
+                    <i class="fas fa-arrow-right "></i>
                   </button>
               </form>
               </div>

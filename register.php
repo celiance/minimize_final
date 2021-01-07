@@ -87,7 +87,7 @@
                 <button type="submit" name="register_submit" value="registrieren">Registrieren</button>
               </form>
               <a href="login.php">
-                <h6>Schon registriert? Hier entlang!</h6>
+                <h6>Einloggen</h6>
               </a>
             </div>
           <?php if(!empty($msg)){ ?>
