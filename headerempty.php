@@ -26,7 +26,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <script src="https://kit.fontawesome.com/898fafec69.js" crossorigin="anonymous"></script>
 
     <title>Minimize</title>
   </head>
@@ -34,18 +33,12 @@
 
     <!-- HEADER HEADER -->
     <header>
-      <a href="/index.php">
-        <button>
-          <i class="fas fa-arrow-left" id="arrow"></i>
-        </button>
-      </a>
+
     </header>
 
     <div class="desktop-meldung">
       <a href="index.php">
-        <img src="assets/logominimize.png" alt="Logo" width= 200px" id="logo">
+        <img src="assets/logo.png" alt="Logo" width= 200px" id="logo">
       </a>
       <h2>Bitte öffne Minimize mit deinem Handy.</h2>
     </div>
-
-  </body>

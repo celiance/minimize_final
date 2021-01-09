@@ -21,29 +21,35 @@
     <section class="menu">
         <main>
               <div class="menu">
-                <p><?php echo $user['name']; ?></p>
-                  <a href="">
+                <a href="updateProfil.php?user_id=<?php echo $user_id; ?>">
+                  <p><?php echo $user['name']; ?></p>
+                </a>
                     <button type="button" name="button">
-                      <i class="fas fa-arrow-right "></i>
+                      <a href="updateProfil.php?user_id=<?php echo $user_id; ?>">
+                      <i class="fas fa-arrow-circle-right fa-2x"></i>
+                      </a>
                     </button>
                   </a>
                 </div>
 
               <div class="menu">
-                <p><?php echo $user['email']; ?></p>
-                <a href="">
+                <a href="updateProfil.php?user_id=<?php echo $user_id; ?>">
+                  <p><?php echo $user['email']; ?></p>
+                </a>
                   <button type="button" name="button">
-                    <i class="fas fa-arrow-right "></i>
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
                 </a>
               </div>
 
               <div class="menu">
                 <a href="updateProfil.php?user_id=<?php echo $user_id; ?>">
-                  <p>Passwort</p>
+                  <p>Passwort *****</p>
                 </a>
                   <button type="button" name="button" >
-                    <i class="fas fa-arrow-right "></i>
+                    <a href="updateProfil.php?user_id=<?php echo $user_id; ?>">
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
+                    </a>
                   </button>
                 </a>
               </div>
@@ -53,7 +59,7 @@
                   <p>Ausloggen</p>
                 </a>
                 <button type="button" name="button" onclick="window.location.href='/login.php'">
-                  <i class="fas fa-arrow-right "></i>
+                  <i class="fas fa-arrow-circle-right fa-2x"></i>
                 </button>
               </div>
 
@@ -61,7 +67,7 @@
                 <p>Profil löschen</p>
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                   <button type="submit" name="delete-profil">
-                    <i class="fas fa-arrow-right "></i>
+                    <i class="fas fa-arrow-circle-right fa-2x"></i>
                   </button>
               </form>
               </div>

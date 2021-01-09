@@ -21,20 +21,22 @@
   }
 
   if(isset($_POST['delete_product'])){
-        $result = delete_product($product_id);
-        if($result){
-          $product_deleted = true;
-          $msg .= "Sie haben ihr Produkt erfolgreich gelöscht.</br>";
-          header("Location: MeinInventar.php");
-        }else{
-          $msg .= "ERROR";
-        }
-    }
+          $del_prod = delete_product($product_id);
+          if($del_prod){
+            $product_deleted = true;
+            $msg .= "Sie haben ihr Produkt erfolgreich gelöscht.</br>";
+            header("Location: MeinInventar.php");
+          }else{
+            $msg .= "ERROR";
+          }
+      }
+
+
+
 
 ?>
   <!-- MAIN MAIN -->
   <body class="produktseite">
-
       <!--Produktanzeige-->
       <div class="produktonly">
         <main>
@@ -43,7 +45,8 @@
               <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" width="100">
               <p><?php echo $product['description']; ?></p>
               <p>Preis: <?php echo $product['price']; ?> CHF</p>
-              <p>Gekauft am:
+              <p>Gekauft am:</p>
+              <p>
                 <?php
                   $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
                   echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
@@ -55,7 +58,6 @@
                 </button>
               </a>
           </div>
-
           <!--QUITTUNG QUITTUNG QUITTUNG-->
           <div class="quittungbox">
             <a href="<?php $product['quittung']; ?>">
@@ -77,31 +79,32 @@
                 </div>
           <?php }}?>
 
-      <!--buttons werden nur angezeigt, wenn der push aktiv ist-->
-      <?php
-      foreach ($push_products as $push_prod) {
-        $push_prod_id = $push_prod['id'];
-              if($push_prod_id == $product_id){?>
-                <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-                  <div class"buttonalert">
-                    <input type="hidden" name="product_id" value="<?php echo $product[id]; ?>">
-                    <button class="löschenalert" type="submit" name="verkaufen_submit" value="">Nö, besser verkaufen!</button>
-                    <button class="artikelbehalten" type="submit" name="behalten_submit" value="">Artikel behalten!</button>
-                  </div>
-                </form>
-      <?php }}?>
 
-      <!--Produkt löschen btn-->
-      <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-        <button class="löschen" type="submit" name="delete_product" value="delete-product">Produkt löschen</button>
-      </form>
+          <!--buttons werden nur angezeigt, wenn der push aktiv ist-->
+        <?php
+        foreach ($push_products as $push_prod) {
+          $push_prod_id = $push_prod['id'];
+                if($push_prod_id == $product_id){?>
+                  <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+                    <div class"buttonalert">
+                      <input type="hidden" name="product_id" value="<?php echo $product[id]; ?>">
+                      <button class="löschenalert" type="submit" name="verkaufen_submit" value="">Nö, besser verkaufen!</button>
+                      <button class="artikelbehalten" type="submit" name="behalten_submit" value="">Artikel behalten!</button>
+                    </div>
+                  </form>
+        <?php }}?>
 
-    </main>
+        <!--Produkt löschen btn-->
+        <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+          <button class="löschen" type="submit" name="delete_product">Produkt löschen</button>
+        </form>
 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-<?php include 'footer.php';?>
+      </main>
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+  <?php include 'footer.php';?>

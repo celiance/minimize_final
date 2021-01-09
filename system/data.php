@@ -60,11 +60,11 @@ function get_user_by_id($id){
 	return $result->fetch();
 }
 
-function product_input($img, $product_name, $purchase_date, $price, $description, $quittung, $status, $owner_id){
+function product_input($img, $product_name, $purchase_date, $description, $status, $owner_id){
 	$db = get_db_connection();
-	$sql = "INSERT INTO products (img, product_name, purchase_date, price, description, quittung, status, owner_id ) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+	$sql = "INSERT INTO products (img, product_name, purchase_date, description, status, owner_id ) VALUES (?, ?, ?, ?, ?, ?);";
 	$stmt = $db->prepare($sql);
-	return $stmt->execute(array($img, $product_name, $purchase_date, $price, $description, $quittung, $status, $owner_id));
+	return $stmt->execute(array($img, $product_name, $purchase_date, $description, $status, $owner_id));
 }
 
 
@@ -93,13 +93,29 @@ function get_product_push($owner_id){
 
 
 
-/* UPDATE Status */
+/* UPDATE Befehle */
 
 function update_status($product_id){
 	$db = get_db_connection();
 	$sql = "UPDATE products SET status=CURRENT_TIMESTAMP WHERE id=?;";
 	$stmt = $db->prepare($sql);
 	$values = array($product_id);
+	return $stmt->execute($values);
+}
+
+function update_name($id, $name){
+	$db = get_db_connection();
+	$sql = "UPDATE user SET name='$name' WHERE id=?;";
+	$stmt = $db->prepare($sql);
+	$values = array($user_id, $name);
+	return $stmt->execute($values);
+}
+
+function update_profil($user_id, $password){
+	$db = get_db_connection();
+	$sql = "UPDATE user SET password=$password WHERE id=$user_id;";
+	$stmt = $db->prepare($sql);
+	$values = array($id, $password);
 	return $stmt->execute($values);
 }
 
@@ -113,11 +129,11 @@ function delete_profil($id){
 	return $stmt->execute(array($id));
 }
 
-function delete_product($product_id){
+function delete_product($id){
 	$db = get_db_connection();
 	$sql = "DELETE FROM products WHERE id=?;";
 	$stmt = $db->prepare($sql);
-	return $stmt->execute(array($product_id));
+	return $stmt->execute(array($id));
 }
 
 

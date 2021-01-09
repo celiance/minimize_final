@@ -11,9 +11,14 @@
   <section class="inventar navbackground">
       <main>
         <h2>Brauchst du diese Artikel noch?</h2>
+        <?php  if(empty($all_products)){ ?>
+            <p>Noch keine Produkte erfasst?</p>
+            <button type="button" name="button" onclick="window.location.href='/artikelErfassen.php'">Erstes Produkt erfassen</button>
+        <?php }?>
         <!--Alle Push-Produkte-->
 <?php foreach ($all_products as $product) { ?>
         <div class="produktbox">
+
           <!--Einzelnes Produkt-->
             <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
               <!--Produktbild-->
